@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.field_components
+    - field.field.node.page.field_intro
     - node.type.page
   module:
+    - entity_reference_revisions
     - text
     - user
 _core:
@@ -15,13 +17,22 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 100
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
+  field_intro:
+    weight: 103
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
   links:
     weight: 101
     region: content
