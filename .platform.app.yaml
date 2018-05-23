@@ -46,7 +46,7 @@ hooks:
     build: |
       set -e
       cd web/themes/custom/prism
-      yarn install
+      npm install
       gulp build
       gulp pl
     # The deploy hook runs after your application has been deployed and started.
