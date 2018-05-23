@@ -1,0 +1,28 @@
+uuid: 804f9c4f-6177-4e45-a894-b349405ebfc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_reference
+    - media.type.image
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.field_image_reference
+field_name: field_image_reference
+entity_type: paragraph
+bundle: image
+label: Image
+description: 'You may include up to 2 images, which affects the page layout (ie two landscape images alongside one portrait image)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

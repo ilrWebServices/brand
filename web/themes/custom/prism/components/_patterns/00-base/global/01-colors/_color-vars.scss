@@ -1,7 +1,8 @@
 $white: white;
 $black: #222;
 $cornellian: #b31b1b;
-$gray-lightest: ccc;
+$gray-lightest: #ccc;
+$gray-dark: lighten($black, 15%);
 $gray-darker: lighten($black, 5%);
 $gray: lighten($black, 25%);
 $gray-light: lighten($gray, 10%);

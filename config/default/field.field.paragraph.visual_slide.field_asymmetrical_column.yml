@@ -1,0 +1,21 @@
+uuid: 8d8c863e-044b-4da9-a2e6-e86ffd2f6da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_asymmetrical_column
+    - paragraphs.paragraphs_type.visual_slide
+  module:
+    - options
+id: paragraph.visual_slide.field_asymmetrical_column
+field_name: field_asymmetrical_column
+entity_type: paragraph
+bundle: visual_slide
+label: 'Asymmetrical column'
+description: 'Optionally, you can set a % width for the first column of the grid. The rest of the columns will be evenly spaced.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

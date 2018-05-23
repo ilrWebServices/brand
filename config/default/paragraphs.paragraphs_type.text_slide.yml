@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: text_slide
-label: 'Text slide'
+label: 'text slide'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }

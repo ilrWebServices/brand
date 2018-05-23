@@ -1,0 +1,40 @@
+uuid: 80326b18-ced9-40ba-9e02-c89f710532b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_content
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.text_slide.field_text_content
+field_name: field_text_content
+entity_type: paragraph
+bundle: text_slide
+label: 'Text content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+    target_bundles_drag_drop:
+      image:
+        weight: 5
+        enabled: false
+      text:
+        enabled: true
+        weight: 6
+      text_slide:
+        weight: 7
+        enabled: false
+      visual_slide:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

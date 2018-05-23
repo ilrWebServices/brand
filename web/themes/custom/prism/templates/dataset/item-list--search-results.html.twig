@@ -1,0 +1,19 @@
+{% if context.list_style %}
+  {%- set attributes = attributes.addClass('item-list__' ~ context.list_style) %}
+{% endif %}
+
+{% if items or empty %}
+  {% if items %}
+    {# We have to manipulate the results for teasers to avoid errors #}
+    {% set teasers = [] %}
+    {% for item in items %}
+      {% set teasers = teasers|merge([item.value]) %}
+    {% endfor %}
+    {% include '@organisms/teaser-list/teaser-list.twig' with {
+      teasers: teasers,
+      list_heading: 'Search Results',
+    } %}
+  {% else %}
+    {{ empty }}
+  {% endif %}
+{% endif %}

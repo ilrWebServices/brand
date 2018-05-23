@@ -1,0 +1,46 @@
+uuid: f93376ae-4e87-454f-bd82-e9b2d43c1b83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.visual_slide.field_asymmetrical_column
+    - field.field.paragraph.visual_slide.field_body
+    - field.field.paragraph.visual_slide.field_columns
+    - field.field.paragraph.visual_slide.field_components
+    - field.field.paragraph.visual_slide.field_heading
+    - paragraphs.paragraphs_type.visual_slide
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.visual_slide.default
+targetEntityType: paragraph
+bundle: visual_slide
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_components:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_asymmetrical_column: true
+  field_columns: true

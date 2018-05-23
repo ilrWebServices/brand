@@ -1,6 +1,107 @@
 <?php
+use Drupal\Component\Utility\Html;
+use Drupal\media_entity\entity\Media;
+use Drupal\node\Entity\Node;
 
 /**
  * @file
  * Functions to support theming in the Prism theme.
  */
+
+/**
+ * Preprocess variables for html templates.
+ * @param $variables
+ */
+function prism_preprocess(&$variables) {
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+  $variables['#cache']['contexts'][] = 'url.path.is_front';
+}
+
+/**
+ * Preprocess variables for html templates.
+ * @param $variables
+ */
+function prism_preprocess_html(&$variables) {
+  $variables['path_info']['args'] = Html::cleanCssIdentifier(ltrim(\Drupal::request()->getPathInfo(), '/'));
+  if (!empty($variables['node_type'])) {
+    $type = str_replace('_', '-', $variables['node_type']);
+    $variables['path_info']['node_type_class'] = "node-type__{$type}";
+  }
+  // Prepare the html template for production-specific
+  // output like google tag manager
+  if (isset($_ENV['PLATFORM_BRANCH']) && $_ENV['PLATFORM_BRANCH'] == 'master') {
+    $variables['is_production'] = TRUE;
+  }
+}
+
+/**
+ * Implements template_preprocess_node().
+ * Pepares the image entity for theming
+ */
+function prism_preprocess_node(&$variables) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = &$variables['node'];
+  if ($node->hasField('field_image_reference')) {
+    if ($media_entity = prism_get_media_entity_from_reference($node->get('field_image_reference')->first())) {
+      $variables['img'] = prism_get_image_properties_from_media_entity($media_entity);
+    }
+  }
+}
+
+function prism_preprocess_media(&$variables) {
+  $variables['img'] = prism_get_image_properties_from_media_entity($variables['media']);
+}
+
+/**
+ * Implements hook_preprocess_entity().
+ */
+function prism_preprocess_paragraph(&$variables) {
+  $paragraph = &$variables['paragraph'];
+  if ($paragraph->hasField('field_image')) {
+    $media_entity = prism_get_media_entity_from_reference($paragraph->get('field_image')->first());
+    $variables['img'] = prism_get_image_properties_from_media_entity($media_entity);
+  }
+}
+
+/**
+ * Takes an entity_reference and returns the media_entity
+
+ * @param  $media_reference
+ *
+ * @return object the media entity
+ */
+function prism_get_media_entity_from_reference($media_reference=NULL) {
+  if ($media_reference) {
+    $media_entity = $media_reference->get('entity')->getTarget();
+    return $media_entity;
+  }
+  return NULL;
+}
+
+/**
+ * Takes a media entity and returns a keyed array of entities: file, image, and media.
+ *
+ * @param $media_entity
+ *
+ * @return array containing a file, image, and media entity or null
+ */
+function prism_get_image_properties_from_media_entity($media_entity) {
+  if ($media_entity) {
+    if ($img_entity = $media_entity->get('field_media_image')->first()) {
+      if ($file_entity = $img_entity->get('entity')->getTarget()) {
+        return [
+          'uri' => $file_entity->get('uri')->getString(),
+          'alt' => $img_entity->get('alt')->getString(),
+          'title' => $img_entity->get('title')->getString(),
+          'caption' => $media_entity->get('field_caption')->value,
+        ];
+      }
+    }
+  }
+  return NULL;
+}

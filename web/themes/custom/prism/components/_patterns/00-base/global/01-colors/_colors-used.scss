@@ -4,6 +4,8 @@ $color-link: $cornellian;
 $color-link--hover: lighten($color-link, 10%);
 $color-link--alt: $cornellian;
 $color-link--alt-hover: lighten($color-link, 10%);
+$color-breadcrumb: $color-link;
+$color-breadcrumb--active: $color-link--alt;
 
 $color-heading: $cornellian;
 $color-heading--alt: $white;
@@ -11,5 +13,9 @@ $color-text: $black;
 
 $color-header-bg: $white;
 $color-footer-bg: $black;
+$color-footer-text: $white;
+$color-border: $gray-light;
 $color-button: $white;
 $color-button--hover: $color-link;
+
+$color-mobile-nav-bg: $black;

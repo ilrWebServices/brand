@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: visual_slide
-label: 'Visual slide'
+label: 'visual slide'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }

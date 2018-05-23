@@ -1,0 +1,9 @@
+{% set img_src = img ? img.uri|image_style('media_thumbnail') : NULL %}
+
+<div class="media__image">
+  {% include "@atoms/04-media/image/image.twig" with {
+    "img_src": img_src,
+    "img_alt": img.alt,
+    "img_caption": img.caption,
+  } %}
+</div>

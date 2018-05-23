@@ -1,0 +1,19 @@
+uuid: 7914da12-2240-4b99-9b0f-a62d2a4c5968
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.visual_slide
+id: paragraph.visual_slide.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: visual_slide
+label: Subheading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

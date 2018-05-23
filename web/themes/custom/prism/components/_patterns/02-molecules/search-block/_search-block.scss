@@ -1,0 +1,133 @@
+// sass-lint:disable quotes
+
+$search-width: 500px;
+$animation-transition: height 0.4s;
+
+.search-block {
+  position: relative;
+
+  @include breakpoint(large) {
+    order: 10;
+  }
+
+  &__toggle-label {
+    @include svg-ir(24px, 24px, '<?xml version="1.0" encoding="UTF-8"?><svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>search</title><defs></defs><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="header_one" transform="translate(-1168.000000, -70.000000)" stroke="#b31b1b" fill-rule="nonzero" fill="#FFFFFF"><g id="nav" transform="translate(552.000000, 71.000000)"><g id="search" transform="translate(617.000000, 0.000000)"><path d="M19.5909768,16.5356417 L18.408932,17.7292897 L17.8990168,17.2155177 C19.5742312,15.3857695 20.6004896,12.9506762 20.6004896,10.2802881 C20.6004896,4.6121825 15.9895294,0.000892658442 10.3224127,0.000892658442 C4.6556257,0.0021805496 0.0430173092,4.61185287 0.0430173092,10.2802881 C0.0430173092,15.9487233 4.65529606,20.5596835 10.3237313,20.5596835 C12.9943171,20.5596835 15.4291468,19.5359963 17.2589609,17.8607818 L17.7727329,18.3745538 L16.7039843,19.484507 L24.1349877,26.956715 L24.3242718,26.956715 C25.8243832,26.956715 27,25.6549132 27,24.1560874 L27,23.9668033 L19.5909768,16.5356417 Z M10.3238961,19.6465894 C5.15914598,19.6465894 0.95759474,15.4450382 0.95759474,10.2802881 C0.95759474,5.11553797 5.15914598,0.913986723 10.3238961,0.913986723 C15.4886462,0.913986723 19.6901974,5.11553797 19.6901974,10.2802881 C19.6889099,15.4450382 15.4873277,19.6465894 10.3238961,19.6465894 Z M24.5048732,25.9508941 L17.9971826,19.4432035 L19.6118757,17.8285104 L26.1195664,24.336201 C26.0345827,25.1873233 25.35471,25.8659137 24.5048732,25.9508941 L24.5048732,25.9508941 Z" id="Shape"></path></g></g></g></g></svg>', inline-block);
+
+    margin: 10px 10px 0;
+    cursor: pointer;
+  }
+
+  &__toggle {
+    display: none;
+
+    &:checked ~ .search-block__content {
+      transition: $animation-transition;
+      height: 50px;
+
+      @include large {
+        height: 80px;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: $search-width;
+    right: 0;
+    overflow: hidden;
+    transition: $animation-transition;
+    height: 0;
+
+    @include large {
+      left: -$search-width + 100px;
+      padding-top: $space;
+    }
+  }
+
+  &__item {
+    margin: 0;
+
+    .form-item__textfield {
+      width: 100%;
+      background-color: $color-bg-body;
+    }
+
+    &--input {
+      width: 30%;
+      float: right;
+
+      @include large {
+        width: 70%;
+        float: left;
+      }
+
+      .form-item__textfield {
+        padding: 0.1rem 0.5rem;
+        font-family: $font-heading;
+        font-size: calc(16px + 0.75vw);
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $gray-darker;
+        background-color: transparent;
+        border-width: 0;
+        border-bottom: 1px $color-border solid;
+        text-align: right;
+
+        @include large {
+          border-bottom-color: $color-link;
+          text-align: left;
+        }
+
+        @include xs {
+          font-size: calc(18px + 0.75vw);
+        }
+
+        @include small {
+          font-size: calc(18px + 1.5vw);
+        }
+
+        @include medium {
+          font-size: calc(20px + 2vw);
+        }
+
+        @include xl {
+          @include type-scale(large);
+        }
+      }
+    }
+
+    &--submit {
+      display: none;
+
+      @include large {
+        width: 4rem;
+        margin-left: 1rem;
+        float: left;
+        display: block;
+      }
+
+      .form-item__textfield {
+        padding: 0.25rem 0.5rem;
+        font-family: $font-body;
+        font-size: calc(10px + 0.75vw);
+        background-color: $color-link;
+
+        @include xs {
+          font-size: calc(11px + 0.75vw);
+        }
+
+        @include small {
+          font-size: calc(11px + 1.5vw);
+        }
+
+        @include xl {
+          @include type-scale(medium);
+        }
+      }
+    }
+  }
+
+  &__close {
+    float: right;
+  }
+}

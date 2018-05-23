@@ -1,0 +1,27 @@
+// A
+.main-menu__link {
+  @include heading-small;
+  @include link($color-link--hover: white);
+
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0;
+  color: white;
+
+  &:hover {
+    background: lighten($color-mobile-nav-bg, 5%);
+  }
+
+  @include breakpoint($main-menu-medium) {
+    display: inline-block;
+    padding: 0 0.5em;
+    color: $color-heading;
+
+    &:hover {
+      color: $color-link--hover;
+      text-decoration: none;
+      background: white;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 3d3ec87a-e823-49b1-8215-37cc7fce0855
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns
+    - paragraphs.paragraphs_type.visual_slide
+  module:
+    - options
+id: paragraph.visual_slide.field_columns
+field_name: field_columns
+entity_type: paragraph
+bundle: visual_slide
+label: Columns
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,13 +1,16 @@
+uuid: 4a004b36-4bc9-4992-bc18-f2512e85ac72
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
   module:
     - focal_point
     - path
+    - text
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -19,6 +22,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_caption:
+    weight: 101
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_media_image:
     settings:
       progress_indicator: throbber
@@ -60,4 +71,3 @@ content:
     region: content
     third_party_settings: {  }
 hidden: {  }
-uuid: 4a004b36-4bc9-4992-bc18-f2512e85ac72

@@ -1,0 +1,22 @@
+// Responsive Video relies on the display mode for the video_embed_field
+// these are for PL only
+
+.pl .video {
+  height: 0;
+  overflow: hidden;
+  padding-top: 35px;
+  padding-bottom: 56.25%; // 56.25% = 16x9
+  position: relative;
+
+  &--full {
+    padding-bottom: 75%; // 75% = 4x3
+  }
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+uuid: b53c169b-39f6-4567-857a-a609d6b6e2a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_slide.field_text_content
+    - paragraphs.paragraphs_type.text_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.text_slide.default
+targetEntityType: paragraph
+bundle: text_slide
+mode: default
+content:
+  field_text_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,45 @@
+.breadcrumb {
+  @include list-reset;
+  @include trailer(1);
+}
+
+.breadcrumb__item,
+.breadcrumb__link,
+.breadcrumb__link:link,
+.breadcrumb__link:visited,
+.breadcrumb__link:focus {
+  color: $color-breadcrumb;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.breadcrumb__link:hover {
+  color: $color-breadcrumb--active;
+}
+
+.breadcrumb__item {
+  @include type-scale(base);
+
+  display: inline-block;
+  margin-right: $space-one-half;
+
+  &::after {
+    content: "/";
+  }
+
+  &:last-child {
+    color: $color-breadcrumb--active;
+
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.breadcrumb__link {
+  padding-right: $space-one-half;
+
+  &:active {
+    color: $color-breadcrumb--active;
+  }
+}

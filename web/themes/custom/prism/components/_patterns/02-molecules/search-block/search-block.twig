@@ -1,0 +1,25 @@
+<div class="search-block" data-drupal-selector="search-block-form" id="block-searchform" role="search">
+
+  <form class="search-block__form" action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+
+    <input id="search-block__toggle" class="search-block__toggle" type="checkbox">
+
+    <label class="search-block__toggle-label" for="search-block__toggle">Search</label>
+
+    <div class="search-block__content">
+
+      <div class="search-block__item search-block__item--input">
+        <label for="edit-keys" class="visually-hidden form-item__label">Search</label>
+
+        <input title="Search" placeholder="Search" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search form-item__textfield" />{{ children }}
+
+      </div>
+
+      <div data-drupal-selector="edit-actions" class="search-block__item search-block__item--submit" id="edit-actions--2">
+
+        <input data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" value="Go" class="button form-submit form-item__textfield" />
+
+      </div>
+    </div>
+  </form>
+</div>

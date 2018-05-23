@@ -1,0 +1,8 @@
+<footer class="footer">
+  {% if pl %}
+    {% include "@molecules/partnership-branding/partnership-branding.twig" %}
+    {% include "@molecules/copyright/copyright.twig" %}
+  {% else %}
+    {{ content }}
+  {% endif %}
+</footer>

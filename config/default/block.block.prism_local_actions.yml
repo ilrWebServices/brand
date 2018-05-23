@@ -9,7 +9,7 @@ _core:
 id: prism_local_actions
 theme: prism
 region: content
-weight: -20
+weight: 0
 provider: null
 plugin: local_actions_block
 settings:

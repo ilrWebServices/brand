@@ -1,6 +1,6 @@
 uuid: 8211733c-1430-42c8-acdf-e4c24dcefcf3
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -11,7 +11,7 @@ _core:
 id: prism_search
 theme: prism
 region: header
-weight: -1
+weight: -3
 provider: null
 plugin: search_form_block
 settings:

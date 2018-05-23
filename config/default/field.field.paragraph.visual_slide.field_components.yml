@@ -1,0 +1,42 @@
+uuid: a1a9553c-f86e-4518-9d9c-387f3d7cf741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.visual_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.visual_slide.field_components
+field_name: field_components
+entity_type: paragraph
+bundle: visual_slide
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+      text: text
+    target_bundles_drag_drop:
+      image:
+        enabled: true
+        weight: 5
+      text:
+        enabled: true
+        weight: 6
+      text_slide:
+        weight: 7
+        enabled: false
+      visual_slide:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

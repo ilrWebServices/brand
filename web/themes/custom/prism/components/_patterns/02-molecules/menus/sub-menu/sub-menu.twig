@@ -1,0 +1,7 @@
+<h2 class="title title__sub-nav">In this Section</h2>
+<nav id="sub-nav" class="sub-nav">
+  {% include "@molecules/menus/_menu.twig" with {
+    menu_class: 'sub-menu',
+    items: pl ? demo.nav.items : items,
+  } %}
+</nav>

@@ -1,0 +1,9 @@
+.footer {
+  @include full-width;
+  @include padding-leader(1);
+  @include padding-trailer(1);
+
+  clear: both;
+  background: $color-footer-bg;
+  color: $color-footer-text;
+}

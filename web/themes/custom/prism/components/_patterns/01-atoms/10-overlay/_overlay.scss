@@ -1,0 +1,39 @@
+// See search block for example of this overlay.
+
+// Base class includes preceding period.
+@mixin overlay($base-class) {
+  &__close {
+    position: absolute;
+    top: 12vh;
+    right: 12.5%;
+    font-size: 2.5rem;
+    color: $gray-darker;
+    cursor: pointer;
+  }
+
+  &__toggle {
+    display: none;
+
+    &:checked ~ #{$base-class}__content {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      pointer-events: auto;
+      cursor: auto;
+      visibility: visible;
+      background-color: rgba($white, 0.98);
+      opacity: 1;
+
+      @include z(overlay);
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+.title__sub-nav {
+  @include heading-small;
+}
+
+.sub-nav {
+  border-top: 1px solid $color-border;
+
+  .sub-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sub-menu__link {
+    display: block;
+    color: $color-text;
+    padding: $space-one-half $space;
+    line-height: 1.2;
+    border-bottom: 1px solid $color-border;
+
+    &:hover,
+    &--active {
+      text-decoration: none;
+      background: $color-border;
+      color: $color-heading;
+    }
+  }
+}

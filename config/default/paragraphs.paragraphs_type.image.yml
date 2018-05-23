@@ -1,9 +1,9 @@
-uuid: 540398ee-de80-4901-b29a-1b9f5cf9a466
+uuid: 06927ed2-51ab-4e3e-8c08-28a0225091be
 langcode: en
 status: true
 dependencies: {  }
-id: intro_slide
-label: 'Intro slide'
+id: image
+label: image
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
