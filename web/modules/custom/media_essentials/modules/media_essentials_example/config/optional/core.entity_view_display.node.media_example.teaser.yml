@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.media_example.field_image_reference
+    - node.type.media_example
+  module:
+    - user
+id: node.media_example.teaser
+targetEntityType: node
+bundle: media_example
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_image_reference: true

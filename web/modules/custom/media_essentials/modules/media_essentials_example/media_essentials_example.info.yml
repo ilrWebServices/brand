@@ -1,0 +1,7 @@
+name: 'Media Essentials Example'
+type: module
+description: 'Example configuration for a content type with a media reference field and image browser'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - media_essentials

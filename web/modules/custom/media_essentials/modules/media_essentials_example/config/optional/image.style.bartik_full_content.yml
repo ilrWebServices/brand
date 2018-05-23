@@ -1,0 +1,17 @@
+uuid: a0f6f4d8-e6e0-4068-9323-690544d89ee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bartik_full_content
+label: 'Bartik full content'
+effects:
+  8f0e0533-d0c6-46af-9fbf-3086d42b7581:
+    uuid: 8f0e0533-d0c6-46af-9fbf-3086d42b7581
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 540
+      crop_type: focal_point
