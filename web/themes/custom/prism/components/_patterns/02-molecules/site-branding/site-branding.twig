@@ -1,0 +1,9 @@
+{% set img_src = img_src | default('../../images/svg/ILR-wordmark.svg') %}
+<div class="site-branding">
+  {% include "@atoms/04-media/image/image.twig" with {
+    img_src: img_src,
+    img_alt: 'ILR Brand Book',
+    img_url: '/',
+    image_link_base_class: 'wordmark',
+  }%}
+</div><!-- /site-branding -->

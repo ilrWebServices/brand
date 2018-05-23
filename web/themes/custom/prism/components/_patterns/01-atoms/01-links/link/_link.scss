@@ -1,0 +1,32 @@
+/// Link
+@mixin link ($color: $color-link, $color-link--hover: $color-link--hover) {
+  color: $color;
+  text-decoration: none;
+
+  &.active,
+  &:active,
+  &:hover {
+    color: $color-link--hover;
+    text-decoration: underline;
+  }
+}
+
+@mixin link-alt {
+  color: $color-link--alt;
+
+  &:hover {
+    color: $color-link--alt-hover;
+  }
+}
+
+.link {
+  @include link;
+
+  &--alt {
+    @include link-alt;
+  }
+}
+
+a {
+  @include link;
+}

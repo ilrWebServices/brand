@@ -1,0 +1,144 @@
+//
+// Generic header styles:
+// All arguments are optional. If not defined, the defaults below will be used
+//
+
+@mixin heading($font-family: $font-heading, $color: $color-heading, $color-heading-link: inherit, $color-heading-link--hover: inherit, $font-weight: 400) {
+  margin: 0;
+  color: $color;
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  width: auto;
+
+  &__link {
+    color: $color-heading-link;
+    text-decoration: none;
+
+    &.active,
+    &:active,
+    &:hover {
+      color: $color-heading-link--hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin heading-xl($font-family: $font-heading, $color: $color-heading, $color-heading-link: inherit, $color-heading-link--hover: inherit, $font-weight: 400) {
+  @include heading($font-family, $color, $color-heading-link, $color-heading-link--hover, $font-weight);
+  @include type-scale(xl);
+  @include trailer(0.5);
+}
+
+@mixin heading-large($font-family: $font-heading, $color: $color-heading, $color-heading-link: inherit, $color-heading-link--hover: inherit, $font-weight: 400) {
+  @include heading($font-family, $color, $color-heading-link, $color-heading-link--hover, $font-weight);
+  @include type-scale(large);
+  @include trailer(0.5);
+}
+
+@mixin heading-medium($font-family: $font-heading, $color: $color-heading, $color-heading-link: inherit, $color-heading-link--hover: inherit, $font-weight: 400) {
+  @include heading($font-family, $color, $color-heading-link, $color-heading-link--hover, $font-weight);
+  @include type-scale(medium);
+  @include trailer(0.3);
+}
+
+@mixin heading-small($font-family: $font-heading, $color: $color-heading, $color-heading-link: inherit, $color-heading-link--hover: inherit, $font-weight: 300) {
+  @include heading($font-family, $color, $color-heading-link, $color-heading-link--hover);
+  @include type-scale(small);
+  @include trailer(0.5);
+}
+
+@mixin heading-xs($font-family: $font-heading, $color: $color-heading, $color-heading-link: inherit, $color-heading-link--hover: inherit, $font-weight: 300) {
+  @include heading($font-family, $color, $color-heading-link, $color-heading-link--hover, $font-weight);
+  @include type-scale(base);
+  @include trailer(0.5);
+}
+
+@mixin alt-heading($color: $color-heading--alt, $font-weight: 300) {
+  color: $color;
+  font-weight: 800;
+  font-size: 7vmax;
+  line-height: 0.75;
+  letter-spacing: -0.75vmin;
+  text-align: right;
+  font-family: $font-extra-bold;
+  text-transform: uppercase;
+
+  .point {
+    font-family: $font-heading;
+    position: relative;
+
+    &--with-frame {
+      &::after {
+        display: block;
+        content: ' ';
+        position: absolute;
+        bottom: -7rem;
+        right: 0;
+        height: 100%;
+        width: 25px;
+        background: white;
+      }
+    }
+  }
+}
+
+.h1 {
+  @include heading-xl();
+}
+
+.h2 {
+  @include heading-large();
+}
+
+.h3 {
+  @include heading-medium();
+}
+
+.h4 {
+  @include heading-small();
+}
+
+.h5,
+.h6 {
+  @include heading-xs();
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  &--alt {
+    @include alt-heading;
+  }
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  h1 {
+    @extend .h1;
+  }
+
+  h2 {
+    @extend .h2;
+  }
+
+  h3 {
+    @extend .h3;
+  }
+
+  h4 {
+    @extend .h4;
+  }
+
+  h5 {
+    @extend .h5;
+  }
+
+  h6 {
+    @extend .h6;
+  }
+}

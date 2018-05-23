@@ -1,0 +1,40 @@
+$base-font-size: 20px;
+$base-line-height: 32px;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+
+@include establish-baseline;
+
+$type-scale: (
+  xs: (
+    font-size: 16px,
+    base-lines: 0.5
+  ),
+  base: (
+    font-size: $base-font-size,
+    base-lines: 0.9
+  ),
+  small: (
+    font-size: 25px,
+    base-lines: 1.1
+  ),
+  medium: (
+    font-size: 31px,
+    base-lines: 1.4
+  ),
+  large: (
+    font-size: 39px,
+    base-lines: 1.6
+  ),
+  xl: (
+    font-size: 49px,
+    base-lines: 1.8
+  ),
+);
+
+@mixin type-scale($scale, $map: $type-scale) {
+  $font-size: map-get(map-get($type-scale, $scale), font-size);
+  $base-lines: map-get(map-get($type-scale, $scale), base-lines);
+
+  @include adjust-font-size-to($font-size, $base-lines);
+}

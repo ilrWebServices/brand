@@ -1,0 +1,42 @@
+$title-padding: 40px;
+
+.title-screen__wrapper {
+  width: 100%;
+  height: 101%; // Prevent animation scrollbar issues
+  overflow: hidden;
+  background: $black;
+  padding: $title-padding;
+  color: white;
+  position: relative;
+}
+
+.title-screen__frame {
+  @include frame($width: 2vmin);
+}
+
+.title-screen__heading {
+  @include alt-heading;
+
+  margin-top: 0;
+}
+
+.title-screen__section {
+  position: absolute;
+  bottom: 0;
+  margin-left: $title-padding * 0.75;
+  font-size: 3vmax;
+
+  @include medium {
+    bottom: $title-padding / 2;
+    margin-left: $title-padding;
+  }
+
+  @include large {
+    bottom: $title-padding * 1.5;
+    margin-left: $title-padding * 3;
+  }
+}
+
+.title-screen__wrapper--alt {
+  background: $cornellian;
+}

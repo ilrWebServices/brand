@@ -1,0 +1,22 @@
+uuid: 9d3de5ed-6d17-4af1-b06e-b3abc49251ab
+langcode: en
+status: true
+dependencies:
+  theme:
+    - prism
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: prism_local_tasks
+theme: prism
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

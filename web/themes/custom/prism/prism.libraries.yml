@@ -1,0 +1,23 @@
+global:
+  css:
+    theme:
+      dist/style.css: {}
+  js:
+    dist/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+main_menu:
+  js:
+    components/_patterns/02-molecules/menus/main-menu/main-menu.js: {}
+  dependencies:
+    - core/drupal
+
+title_screen:
+  js:
+    components/_patterns/02-molecules/title-screen/title-screen.js: {}
+
+logo:
+  js:
+    components/_patterns/01-atoms/04-media/logos/logo.js: {}

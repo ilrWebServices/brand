@@ -1,0 +1,22 @@
+uuid: bc8a7a24-cf71-4ad0-97d9-044b1e7a49fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - prism
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: prism_messages
+theme: prism
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

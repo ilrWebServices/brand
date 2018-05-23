@@ -1,0 +1,95 @@
+$size: 5px;
+
+@mixin button($bg:$color-button, $color:$black, $hoverBg: $color-button--hover, $hoverColor: $white, $border-color: $black) {
+  background-color: $bg;
+  font-family: $font-body;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  line-height: 1.4;
+  padding: 0.75rem 1rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  border-left: $size solid $color;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    background-color: $hoverBg;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    content: ' ';
+    height: $size;
+    transition: 0.4s;
+    background: $border-color; /* default color */
+  }
+
+  &::before {
+    width: 35%;
+    top: -$size;
+    left: -$size;
+  }
+
+  &::after {
+    width: 73%;
+    bottom: -$size;
+    left: -$size;
+  }
+
+  &:hover {
+    background: #b31b1b;
+    color: white;
+
+    &::before {
+      width: 20%;
+    }
+
+    &::after {
+      width: calc(100% + #{$size});
+    }
+  }
+}
+
+@mixin button-alt {
+  border-left: $size solid $color-link;
+
+  &::before,
+  &::after {
+    background: $color-link;
+  }
+
+  &::before {
+    width: 25%;
+  }
+
+  &:hover {
+    border-color: transparent;
+    background: $black;
+
+    &::before {
+      width: 0%;
+    }
+
+    &::after {
+      width: calc(100% + #{$size});
+    }
+  }
+}
+
+.button {
+  @include button;
+
+  &--alt {
+    @include button;
+    @include button-alt;
+  }
+}

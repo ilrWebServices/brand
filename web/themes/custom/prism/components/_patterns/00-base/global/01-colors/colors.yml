@@ -1,0 +1,33 @@
+items:
+  - name: $white
+    value: white
+  - name: $black
+    value: '#222'
+  - name: $cornellian
+    value: '#b31b1b'
+  - name: $gray-lightest
+    value: ccc
+  - name: $gray-darker
+    value: 'lighten($black, 5%)'
+  - name: $gray
+    value: 'lighten($black, 25%)'
+  - name: $gray-light
+    value: 'lighten($gray, 10%)'
+  - name: $lighter-red
+    value: '#ef4035'
+  - name: $dark-blue
+    value: '#073949'
+  - name: $sage
+    value: '#c9d6a5'
+  - name: $army-tent
+    value: '#bfb778'
+  - name: $gray-green
+    value: '#9fad9f'
+  - name: $warm-grey
+    value: '#d8d2c9'
+  - name: $dark-gray-orange
+    value: '#a2998b'
+meta:
+  description: >-
+    To add to these items, use Sass variables that start with <code>$</code> in
+    <code>.//components/_patterns/00-base/global/01-colors/_color-vars.scss</code>

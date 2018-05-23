@@ -1,0 +1,15 @@
+$color-bg-body: $white;
+$color-border: $cornellian;
+$color-link: $cornellian;
+$color-link--hover: lighten($color-link, 10%);
+$color-link--alt: $cornellian;
+$color-link--alt-hover: lighten($color-link, 10%);
+
+$color-heading: $cornellian;
+$color-heading--alt: $white;
+$color-text: $black;
+
+$color-header-bg: $white;
+$color-footer-bg: $black;
+$color-button: $white;
+$color-button--hover: $color-link;

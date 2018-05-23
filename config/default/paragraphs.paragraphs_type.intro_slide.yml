@@ -1,0 +1,9 @@
+uuid: 540398ee-de80-4901-b29a-1b9f5cf9a466
+langcode: en
+status: true
+dependencies: {  }
+id: intro_slide
+label: 'Intro slide'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

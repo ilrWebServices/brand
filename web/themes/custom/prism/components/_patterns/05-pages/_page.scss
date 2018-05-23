@@ -1,0 +1,35 @@
+//
+// General Layout (example code)
+//
+
+body {
+  background: $color-bg-body;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  @include wrapper;
+}
+
+.main-sidebar {
+  @include large {
+    @include grid-span(3,10);
+    @include leader(2.5);
+  }
+}
+
+.main-content {
+  @include clearfix;
+
+  padding: 0 $space;
+
+  @include large {
+    padding: 0;
+
+    &--with-sidebar {
+      @include grid-span(9,1);
+    }
+  }
+}

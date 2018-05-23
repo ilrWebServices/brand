@@ -1,0 +1,11 @@
+img_src:
+  '../../images/svg/ILR-wordmark-reversed.svg'
+img_alt:
+  'The ILR School'
+img_url:
+  '/'
+image_link_base_class:
+  'wordmark'
+image_link_modifiers: ['reversed', 'red']
+image_modifiers: ['reversed']
+

@@ -1,0 +1,22 @@
+uuid: 0e8b79c4-4692-4b90-9d6d-2f1ddf8b76a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - prism
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: prism_help
+theme: prism
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,9 @@
+{% if pl %}
+  <div class="replay"><a class="button button--replay">Animate</a></div>
+{% endif %}
+<div {{ bem('wrapper', (modifiers), 'title-screen') }}>
+  <div class="title-screen__frame" id="frame">
+    <h1 class="title-screen__heading">{{ title|raw }}<span class="point">.</span></h1>
+    <h2 class="title-screen__section">{{ section|raw }}</h2>
+  </div>
+</div>

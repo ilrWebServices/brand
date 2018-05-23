@@ -1,0 +1,11 @@
+img_src:
+  '../../images/svg/ILR-nickname-reversed.svg'
+img_alt:
+  'The ILR School'
+img_url:
+  '/'
+image_link_base_class:
+  'nickname'
+image_link_modifiers: ['reversed']
+image_modifiers: ['reversed']
+

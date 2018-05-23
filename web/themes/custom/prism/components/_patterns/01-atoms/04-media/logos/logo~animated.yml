@@ -1,0 +1,9 @@
+img_src:
+  '../../images/svg/ILR-wordmark.svg'
+img_alt:
+  'The ILR School'
+img_url:
+  '/'
+image_link_base_class:
+  'wordmark'
+image_modifiers: ['masked']

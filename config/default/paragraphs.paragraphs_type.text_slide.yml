@@ -1,0 +1,9 @@
+uuid: ae8d6bfc-01fc-4c44-8dcf-d4721934aaae
+langcode: en
+status: true
+dependencies: {  }
+id: text_slide
+label: 'Text slide'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

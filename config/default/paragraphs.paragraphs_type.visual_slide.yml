@@ -1,0 +1,9 @@
+uuid: 54f6af09-ffb8-4c0c-b745-d51dc7178bcd
+langcode: en
+status: true
+dependencies: {  }
+id: visual_slide
+label: 'Visual slide'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

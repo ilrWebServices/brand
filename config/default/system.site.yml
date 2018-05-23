@@ -1,0 +1,14 @@
+uuid: d5e113e9-8ab5-48c1-9380-a94992aa7d3c
+name: 'ILR Brand Book'
+mail: aaronf@cornell.edu
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
