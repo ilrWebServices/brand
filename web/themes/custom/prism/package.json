@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "compass-mixins": "0.12.10",
-    "npm": "^6.0.1",
+    "npm": "^6.1.0",
     "sass-tools": "^2.1.2"
   },
   "scripts": {
