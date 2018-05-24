@@ -8,6 +8,10 @@ lando db-import db/dump.sql
 
 lando drush cr
 
+lando drush sql:sanitize -y
+
+lando drush uli
+
 # check whether to keep the prod config in place
 while :; do
   case $1 in
