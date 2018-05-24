@@ -1,0 +1,33 @@
+uuid: a3b10f21-c656-4931-8663-9f97bbdce30c
+langcode: en
+status: true
+dependencies: {  }
+id: contributor
+label: Contributor
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access multiple_image_browser entity browser pages'
+  - 'access toolbar'
+  - 'create file media'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'dropzone upload files'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'revert page revisions'
+  - 'update media'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'
