@@ -11,4 +11,4 @@ fi
 
 chmod -R a+rwx sites/default/settings.php
 
-drush si config_installer config_installer_sync_configure_form.sync_directory=../config/default --account-pass=admin --account-name="ilrweb admin" -y
+lando drush si config_installer config_installer_sync_configure_form.sync_directory=../config/default --account-pass=admin --account-name="ilrweb admin" -y

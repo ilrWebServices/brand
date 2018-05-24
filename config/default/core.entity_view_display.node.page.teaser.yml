@@ -20,3 +20,4 @@ content:
     region: content
 hidden:
   field_components: true
+  field_intro: true

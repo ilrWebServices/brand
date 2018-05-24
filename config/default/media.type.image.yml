@@ -1,3 +1,4 @@
+uuid: c76e71ed-0e22-422a-8b81-c12fa7b5ddfd
 langcode: en
 status: true
 dependencies:
@@ -15,4 +16,3 @@ new_revision: true
 source_configuration:
   source_field: field_media_image
 field_map: {  }
-uuid: c76e71ed-0e22-422a-8b81-c12fa7b5ddfd
