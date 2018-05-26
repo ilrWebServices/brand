@@ -3,10 +3,16 @@ global:
     theme:
       dist/style.css: {}
   js:
-    dist/scripts.js: {}
+    dist/00-base/global/global.js: {}
   dependencies:
     - core/drupal
     - core/jquery
+
+typekit:
+  header: true
+  js:
+    //use.typekit.net/buv5geg.js: { every_page: true }
+
 
 main_menu:
   js:
@@ -21,3 +27,11 @@ title_screen:
 logo:
   js:
     components/_patterns/01-atoms/04-media/logos/logo.js: {}
+
+gsap:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js: { every_page: true }
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js: { every_page: true }
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js: { every_page: true }
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/AttrPlugin.min.js: { every_page: true }
+

@@ -1,17 +1,23 @@
 $title-padding: 40px;
 
 .title-screen__wrapper {
-  width: 100%;
-  height: 101%; // Prevent animation scrollbar issues
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   overflow: hidden;
   background: $black;
   padding: $title-padding;
   color: white;
-  position: relative;
 }
 
 .title-screen__frame {
   @include frame($width: 2vmin);
+
+  height: 90vh;
+  visibility: hidden;
 }
 
 .title-screen__heading {

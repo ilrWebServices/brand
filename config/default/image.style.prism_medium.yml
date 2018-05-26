@@ -1,0 +1,15 @@
+uuid: 7f9a2c7f-a003-4b8a-9bd7-187a1fd3fdb2
+langcode: en
+status: true
+dependencies: {  }
+name: prism_medium
+label: 'Prism medium'
+effects:
+  a9c14875-4ccc-4294-9c23-2f6064b2ef53:
+    uuid: a9c14875-4ccc-4294-9c23-2f6064b2ef53
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

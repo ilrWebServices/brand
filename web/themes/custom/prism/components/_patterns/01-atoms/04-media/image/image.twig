@@ -25,7 +25,6 @@
     "link_blockname": image_link_blockname,
   } %}
     {% block link_content %}
-      <div class="mask"></div>
       <img
         {{ bem(image_base_class, (image_modifiers), image_blockname|default(image_link_base_class)) }}
         src="{{ img_src }}"

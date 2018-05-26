@@ -3,6 +3,8 @@
 @mixin paragraph($margin: 0) {
   margin: #{$margin};
   max-width: 800px;
+  color: $color-text;
+  font-weight: 300;
 
   @include trailer(1);
 }

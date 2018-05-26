@@ -1,0 +1,97 @@
+// Be sure to enable debug mode for your grid visualization so show up:
+@include sgs-change('debug', true);
+
+.slide {
+  @include add-grid(12);
+  @include wrapper;
+
+  min-height: 90vh;
+  border-bottom: 5px solid $color-border;
+  padding: 1rem;
+
+  @include large {
+    .slide__intro {
+      @include grid-span(3);
+    }
+  }
+}
+
+.slide-content__col {
+  // @include clearfix;
+  @include trailer(2);
+}
+
+.slide-intro__heading {
+  @include heading-xs($font-weight: 600);
+}
+
+// outer grid for intro and content
+.slide__content {
+  @include large { // all grids
+    @include grid-span(8, 5);
+
+    @for $i from 2 through 4 { // Applies to symmetrical grids
+      &--#{$i}col {
+        .slide-content__col {
+          $n: 12 / $i;
+          @include sgs-change('output', 'float');
+
+          @include grid-span($n);
+
+          &:nth-of-type(#{$i}n) {
+            @include float-span($n, 'last');
+          }
+
+          &:nth-of-type(#{$i}n + 1) {
+            @include float-span($n, 'first');
+          }
+        }
+      }
+    }
+  }
+}
+
+// Asymmetrical grids
+.slide__content--asym {
+  @include add-grid(10);
+  // @include background-grid($color: blue);
+
+  @for $i from 1 through 9 {
+    &-#{$i} {
+      $cols: 10 - $i;
+
+      @include medium {
+        .slide-content__wrapper--first {
+          @include grid-span($i);
+
+          .slide-content__col {
+            width: 100%;
+          }
+        }
+
+        .slide-content__wrapper--last {
+          @include float-span($cols, 'last');
+        }
+      }
+    }
+  }
+
+  @for $i from 2 through 4 {
+    @include large {
+      &.slide__content--#{$i}col {
+        .slide-content__wrapper--last {
+          @include add-grid($i - 1);
+          @include add-gutter(0.1);
+
+          .slide-content__col {
+            @include float-span(1);
+
+            &:last-child {
+              @include float-span(1, 'last');
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,8 @@ body {
   @include clearfix;
 
   padding: 0 $space;
+  position: relative; // Prep for animation @see title-screen.js
+  top: 0;
 
   @include large {
     padding: 0;

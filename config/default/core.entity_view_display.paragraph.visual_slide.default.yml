@@ -11,12 +11,20 @@ dependencies:
     - paragraphs.paragraphs_type.visual_slide
   module:
     - entity_reference_revisions
+    - options
     - text
 id: paragraph.visual_slide.default
 targetEntityType: paragraph
 bundle: visual_slide
 mode: default
 content:
+  field_asymmetrical_column:
+    type: list_key
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_body:
     weight: 1
     label: hidden
@@ -24,6 +32,13 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_columns:
+    type: list_key
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_components:
     weight: 2
     label: hidden
@@ -41,6 +56,4 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  field_asymmetrical_column: true
-  field_columns: true
+hidden: {  }

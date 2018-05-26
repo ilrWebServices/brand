@@ -1,0 +1,7 @@
+{% include '@organisms/slide/visual-slide.twig' with {
+  intro_heading: content.field_heading|field_value,
+  intro_text: content.field_body|field_value,
+  columns: content.field_columns|field_value[0]['#markup'],
+  asymmetrical: content.field_asymmetrical_column|field_value[0]['#markup'] / 10,
+  slides: content.field_components|field_value
+} %}

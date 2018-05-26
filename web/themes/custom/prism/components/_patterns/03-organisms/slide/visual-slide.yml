@@ -1,0 +1,10 @@
+intro_heading: 'Primary Typefaces'
+intro_text:
+  '<p>Replica is ILR’s primary typeface. It is featured in the wordmark and should be used in all visual assets, both printed and on screen.</p>
+   <p>Replica is a contemporary sans serif designed by Dimitri Bruni and Manuel Krebs. The design is inspired by the classic sans-serif grotesques widely used in the 1950s, the formative years of ILR’s history.</p>
+   <p>It’s built around a strict grid that gives it a geometric feel and a unique shape to its terminals. These beveled forms are the starting point for the open frame—the primary graphic element of ILR’s graphic identity (see below).</p>'
+columns: 2
+asymmetrical: 7
+slides:
+  [ '<img class="img" src="http://brandilr.lndo.site/sites/default/files/styles/prism_medium/public/2018-05/replica-capital-r.gif" alt="Capital R in Replica font">',
+    "<h2>Replica</h2>" ]

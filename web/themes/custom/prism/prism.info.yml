@@ -7,8 +7,9 @@ core: 8.x
 # Libraries (These are loaded on every page. Use https://www.drupal.org/developing/api/8/assets#twig whenever possible.)
 libraries:
   - 'prism/global'
+  - 'prism/typekit'
   - 'prism/title_screen'
-  - 'prism/logo'
+  - 'prism/gsap'
 
 # CKEditor stylesheet loads in wysiwyg to give content editors a better experience
 ckeditor_stylesheets:
