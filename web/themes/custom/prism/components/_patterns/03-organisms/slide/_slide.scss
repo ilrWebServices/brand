@@ -4,6 +4,7 @@
 .slide {
   @include add-grid(12);
   @include wrapper;
+  @include leader(2);
 
   min-height: 90vh;
   border-bottom: 5px solid $color-border;
