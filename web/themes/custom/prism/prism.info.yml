@@ -8,8 +8,8 @@ core: 8.x
 libraries:
   - 'prism/global'
   - 'prism/typekit'
-  - 'prism/title_screen'
   - 'prism/gsap'
+  # - 'prism/title_screen'
 
 # CKEditor stylesheet loads in wysiwyg to give content editors a better experience
 ckeditor_stylesheets:
