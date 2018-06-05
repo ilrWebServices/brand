@@ -73,10 +73,10 @@ $admin-toolbar-fix: 3rem;
   padding: 0;
 
   .logo__wrapper {
+    // -webkit-mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
     mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
-    mask-size: 65%;
-    -webkit-mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
     -webkit-mask-size: 30%;
+    mask-size: 65%;
 
     &:hover {
       background: white;
