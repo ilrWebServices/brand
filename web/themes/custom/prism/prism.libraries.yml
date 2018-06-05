@@ -2,8 +2,18 @@ global:
   css:
     theme:
       dist/style.css: {}
+      components/js/fullPage.js/dist/jquery.fullpage.min.css: {}
   js:
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/AttrPlugin.min.js: {}
     dist/00-base/global/global.js: {}
+    components/js/fullPage.js/dist/jquery.fullpage.min.js: {}
+    components/_patterns/03-organisms/slide/slide.js: {}
+    components/_patterns/02-molecules/menus/main-menu/main-menu.js: {}
+
   dependencies:
     - core/drupal
     - core/jquery
@@ -11,15 +21,7 @@ global:
 typekit:
   header: true
   js:
-    //use.typekit.net/buv5geg.js: { every_page: true }
-
-
-main_menu:
-  js:
-    components/_patterns/02-molecules/menus/main-menu/main-menu.js: {}
-  dependencies:
-    - core/drupal
-    - prism/gsap
+    //use.typekit.net/buv5geg.js: {}
 
 title_screen:
   js:
@@ -28,19 +30,3 @@ title_screen:
 logo:
   js:
     components/_patterns/01-atoms/04-media/logos/logo.js: {}
-
-gsap:
-  js:
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js: { every_page: true }
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js: { every_page: true }
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js: { every_page: true }
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js: { every_page: true }
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/AttrPlugin.min.js: { every_page: true }
-
-fullpage:
-  js:
-    components/js/fullPage.js/dist/jquery.fullpage.min.js: { every_page: true }
-    components/_patterns/03-organisms/slide/slide.js: { every_page: true }
-  css:
-    theme:
-      components/js/fullPage.js/dist/jquery.fullpage.min.css: { every_page: true }

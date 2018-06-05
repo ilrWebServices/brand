@@ -34,7 +34,7 @@ $main-menu-medium: 62em;
   z-index: 10;
 
   @include breakpoint($main-menu-medium) {
-    @include padding-trailer(1);
+    @include padding-trailer(0.4);
 
     position: relative;
     background: $white;
