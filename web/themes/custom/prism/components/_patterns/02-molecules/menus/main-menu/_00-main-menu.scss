@@ -1,18 +1,26 @@
 // Menu Breakpoint
 $main-menu-medium: 62em;
 
+#block-prism-main-menu {
+  position: fixed;
+  top: 1.9rem;
+  width: 100vw;
+  z-index: 20000;
+  background: white;
+
+  .adminimal-admin-toolbar & {
+    top: $admin-toolbar-fix;
+  }
+}
+
 // Nav
 .main-nav {
   display: none;
 
-  @include breakpoint($main-menu-medium) {
-    display: flex;
-    margin-right: 3rem;
-  }
-
   &--open {
     display: block;
-    margin-top: 2rem;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 2s;
   }
 }
 
@@ -22,13 +30,21 @@ $main-menu-medium: 62em;
 
   background: $color-mobile-nav-bg;
   position: absolute;
-  left: 1rem;
   width: 90%;
   z-index: 10;
 
   @include breakpoint($main-menu-medium) {
+    @include padding-trailer(1);
+
     position: relative;
-    width: auto;
-    background: transparent;
+    background: $white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &--sub {
+    display: inline-block;
+    // left: -25%;
   }
 }

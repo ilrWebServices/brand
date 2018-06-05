@@ -25,10 +25,11 @@ body {
 
   padding: 0 $space;
   position: relative; // Prep for animation @see title-screen.js
-  top: 0;
+  top: 5rem;
 
   @include large {
-    padding: 0;
+    padding: $space-double 0 0;
+    // border-top: 3px solid $color-border;
 
     &--with-sidebar {
       @include grid-span(9,1);

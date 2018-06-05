@@ -7,7 +7,7 @@
 
   @include breakpoint($main-menu-medium) {
     border-top: none;
-    display: inline-block;
+    display: block;
   }
 
   &:hover {

@@ -6,3 +6,5 @@ img_url:
   '/'
 image_link_base_class:
   'wordmark'
+modifiers:
+  ['wordmark']

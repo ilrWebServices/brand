@@ -1,10 +1,10 @@
-<div class="slide slide--visual">
+<div class="slide slide--visual section">
   <div class="slide__intro">
     <h2 class="slide-intro__heading">{{ intro_heading }}</h2>
     <div class="slide-intro__text">
       {{ intro_text|raw }}
     </div>
-  </div>
+  </div><!-- /.slide-intro-->
 
   {% if asymmetrical %}
     <div class="slide__content slide__content--{{ columns }}col{% if asymmetrical %} slide__content--asym slide__content--asym-{{ asymmetrical }}{% endif %}">
@@ -12,22 +12,25 @@
       {% for slide in slides %}
 
         {% if loop.index == 1 %}
-        <div class="slide-content__wrapper slide-content__wrapper--first">
-          <div class="slide-content__col">
-            {{ slide }}
+          <div class="slide-content__wrapper slide-content__wrapper--first">
+            <div class="slide-content__col">
+              {{ slide }}
+            </div>
           </div>
-        </div>
 
         {% else %}
-
           {% if loop.index == 2 %}
             <div class="slide-content__wrapper slide-content__wrapper--last">
           {% endif %}
 
           <div class="slide-content__col">{{ slide|raw }}</div>
+
+          {% if loop.index == 2 %}
+            </div><!-- /.slide-content__wrapper--last -->
+          {% endif %}
         {% endif %}
       {% endfor %}
-    </div><!-- /.slide-content__wrapper--last -->
+      </div><!-- /.slide-content-->
   {% else %}
     <div class="slide__content slide__content--sym slide__content--{{ columns }}col">
       {% for slide in slides %}
@@ -36,7 +39,5 @@
         </div>
       {% endfor %}
     </div><!-- /.slide-content-->
-
-
   {% endif %}
 </div><!-- /.slide--visual -->

@@ -1,6 +1,10 @@
-{% include "@atoms/04-media/image/image.twig" with {
-  img_src: img_src,
-  img_alt: img_alt,
-  img_url: img_url,
-  image_link_base_class: image_link_base_class
-} %}
+<a id="toggle-expand" href="#" {{ bem('link', (modifiers), 'logo') }}>
+  <span class="logo__wrapper">
+    {% include "@atoms/04-media/image/image.twig" with {
+      img_src: img_src,
+      img_alt: img_alt,
+      img_url: false
+    } %}
+  </span>
+</a>
+

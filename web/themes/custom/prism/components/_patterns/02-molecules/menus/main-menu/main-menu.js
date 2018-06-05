@@ -10,40 +10,54 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 
 
-// (function (Drupal) { // UNCOMMENT IF DRUPAL.
-//
-//   Drupal.behaviors.mainMenu = {
-//     attach: function (context) {
+(function ($, Drupal) { // UNCOMMENT IF DRUPAL.
 
-(function () { // REMOVE IF DRUPAL.
+  Drupal.behaviors.mainMenu = {
+    attach: function (context) {
+      'use strict';
 
-  'use strict';
+      // Use context instead of document IF DRUPAL.
+      var toggle_expand = document.getElementById('toggle-expand'),
+          menu = document.getElementById('main-nav'),
+          expand_menu = false,
+          items = [],
+          timing = .4,
+          stagger = .02,
+          offset = timing - stagger,
+          tl = new TimelineLite({ onReverseComplete: resetMenu });
 
-  // Use context instead of document IF DRUPAL.
-  var toggle_expand = document.getElementById('toggle-expand');
-  var menu = document.getElementById('main-nav');
-  var expand_menu;
+      if (menu) {
+        expand_menu = menu.getElementsByClassName('expand-sub');
 
-  if (menu) {
-    expand_menu = menu.getElementsByClassName('expand-sub');
-    // Mobile Menu Show/Hide.
-    toggle_expand.addEventListener('click', function (e) {
-      toggle_expand.classList.toggle('toggle-expand--open');
-      menu.classList.toggle('main-nav--open');
-    });
+        $(toggle_expand).hover(
+          function() {
+            menu.classList.toggle('main-nav--open');
+            if (items.length) {
+              tl.restart();
+            }
+            else {
+              items = $('.main-menu__item');
+              $(items).each(function(index){
+                tl.from(this, timing, {top:"-=30px", autoAlpha: 0, ease: Power3.easeOut}, '-='+offset);
+              });
+            }
+          },
+          function(){},
+        );
 
-    // Expose mobile sub menu on click.
-    for (var i = 0; i < expand_menu.length; i++) {
-      expand_menu[i].addEventListener('click', function (e) {
-        var menu_item = e.currentTarget;
-        var sub_menu = menu_item.nextElementSibling;
+        $(menu).hover(
+          function(){},
+          function() {
+            // if (!tl.reversed()) {
+              tl.reverse();
+            // }
+          }
+        );
+      }
 
-        menu_item.classList.toggle('expand-sub--open');
-        sub_menu.classList.toggle('main-menu--sub-open');
-      });
+      function resetMenu() {
+        menu.classList.toggle('main-nav--open');
+      }
     }
-  }
-
-})(); // REMOVE IF DRUPAL.
-
-// })(Drupal); // UNCOMMENT IF DRUPAL.
+  };
+}(jQuery, Drupal)); // UNCOMMENT IF DRUPAL.

@@ -5,8 +5,6 @@ items:
     value: '#222'
   - name: $cornellian
     value: '#b31b1b'
-  - name: $gray-lightest
-    value: '#ccc'
   - name: $gray-dark
     value: 'lighten($black, 15%)'
   - name: $gray-darker
@@ -15,6 +13,10 @@ items:
     value: 'lighten($black, 25%)'
   - name: $gray-light
     value: 'lighten($gray, 10%)'
+  - name: $gray-lighter
+    value: 'lighten($gray, 20%)'
+  - name: $gray-lightest
+    value: '#ccc'
   - name: $lighter-red
     value: '#ef4035'
   - name: $dark-blue

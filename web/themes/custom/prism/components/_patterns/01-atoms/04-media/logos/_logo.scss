@@ -1,31 +1,65 @@
-.wordmark,
-.nickname {
-  position: relative;
-  display: inline-block;
-  padding: 3rem;
+$admin-toolbar-fix: 3rem;
 
-  @include clearfix;
+.logo__link {
+  position: fixed;
+  top: 1rem;
+  display: inline-block;
+  z-index: 100000;
+  background: white;
+
+  .adminimal-admin-toolbar & {
+    top: $admin-toolbar-fix;
+  }
 
   &--reversed {
     background: $black;
+
+    .logo__wrapper {
+      background: $white;
+    }
   }
 
-  &--red {
-    background: $cornellian;
+  &:hover {
+    background: $black;
   }
 
-  .mask {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: red;
-    display: none;
+  img {
+    padding: 1.3rem 1rem;
+    visibility: hidden;
   }
 }
 
-.wordmark__img {
-  max-width: 300px;
-  min-width: 200px;
+.logo__wrapper {
+  background: $black;
+  display: block;
+
+  &:hover {
+    background: white;
+  }
+}
+
+.logo__link--reversed.logo__link--red {
+  background: $cornellian;
+}
+
+.logo__link--wordmark {
+  max-width: 400px;
+  min-width: 300px;
+  padding: 1rem 0;
+  background: $white;
+
+  .logo__wrapper {
+    mask: url(../components/images/svg/ILR-wordmark.svg) no-repeat center;
+    mask-size: 80%;
+
+    &:hover {
+      background: white;
+    }
+  }
+
+  &:hover {
+    background: $black;
+  }
 
   &--masked {
     transition: clip-path 0.5s;
@@ -33,9 +67,17 @@
   }
 }
 
-.nickname {
-  &__img {
-    max-width: 100px;
-    min-width: 60px;
+.logo__link--nickname {
+  max-width: 200px;
+  min-width: 80px;
+  padding: 0;
+
+  .logo__wrapper {
+    mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
+    mask-size: 65%;
+
+    &:hover {
+      background: white;
+    }
   }
 }

@@ -1,6 +1,19 @@
 demo:
   nav:
     items:
-      - title: "Home"
-      - title: "Articles"
-      - title: "Recipes"
+      - title: "Hello"
+      - title: "Our Verbal Style"
+        below:
+          - title: "Personality & Tone"
+          - title: "About ILR"
+          - title: "Tagline System"
+      - title: "Our Visual Style"
+        below:
+          - title: "Color"
+          - title: "Typography"
+          - title: "Wordmark"
+          - title: "The Open Frame"
+          - title: "Brand Architecture"
+          - title: "Photography"
+          - title: "Examples"
+      - title: "Downloads"

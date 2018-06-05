@@ -6,6 +6,5 @@ img_url:
   '/'
 image_link_base_class:
   'wordmark'
-image_link_modifiers: ['reversed', 'red']
-image_modifiers: ['reversed']
+modifiers: ['reversed', 'red', 'wordmark']
 

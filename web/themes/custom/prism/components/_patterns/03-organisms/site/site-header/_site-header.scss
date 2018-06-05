@@ -1,37 +1,8 @@
 .site-header {
-  @include leader(-1);
   @include full-width;
-
-  @include small {
-    @include leader(-2);
-  }
-
-  @include breakpoint($main-menu-medium) {
-    margin-top: 0;
-  }
-
-  &.site-header--not-front {
-    @include trailing-border(3px, 0);
-    @include trailer(1);
-
-    border-color: $color-border;
-  }
+  @include leader(1);
 
   &__wrapper {
     @include wrapper;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .site-branding {
-    flex-grow: 1;
-    margin: $space-one-half $space-double 0 $space;
-
-    @include breakpoint($main-menu-medium) {
-      margin-top: 0;
-      margin-left: $space-double;
-    }
   }
 }

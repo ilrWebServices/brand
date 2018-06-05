@@ -1,27 +1,31 @@
 // A
 .main-menu__link {
-  @include heading-small;
-  @include link($color-link--hover: white);
-
   display: block;
   width: 100%;
-  padding: 1rem;
+  padding: 0.2rem 0;
   margin-bottom: 0;
-  color: white;
+  text-align: center;
 
   &:hover {
-    background: lighten($color-mobile-nav-bg, 5%);
+    color: $color-link--hover;
+    text-decoration: none;
+  }
+
+  &--sub {
+    border-top: 1px solid $color-subnav;
+    color: $color-subnav;
+
+    &:hover {
+      color: $color-link;
+      text-decoration: none;
+    }
   }
 
   @include breakpoint($main-menu-medium) {
     display: inline-block;
-    padding: 0 0.5em;
-    color: $color-heading;
 
-    &:hover {
-      color: $color-link--hover;
-      text-decoration: none;
-      background: white;
+    &--sub {
+      border: none;
     }
   }
 }

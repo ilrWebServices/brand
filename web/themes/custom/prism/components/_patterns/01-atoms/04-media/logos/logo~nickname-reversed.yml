@@ -8,4 +8,6 @@ image_link_base_class:
   'nickname'
 image_link_modifiers: ['reversed']
 image_modifiers: ['reversed']
+modifiers:
+  ['nickname', 'reversed']
 

@@ -13,7 +13,7 @@ _core:
 id: prism_main_menu
 theme: prism
 region: header
-weight: -4
+weight: -2
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,5 +22,5 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 2
 visibility: {  }

@@ -1,19 +1,33 @@
-// Be sure to enable debug mode for your grid visualization so show up:
-@include sgs-change('debug', true);
-
 .slide {
-  @include add-grid(12);
   @include wrapper;
-  @include leader(2);
+  @include add-grid(12);
+  @include add-gutter(1/2);
+  @include leader(1);
 
   min-height: 90vh;
-  border-bottom: 5px solid $color-border;
+  // border-bottom: 5px solid $color-border;
   padding: 1rem;
 
   @include large {
     .slide__intro {
       @include grid-span(3);
     }
+  }
+
+  @include xl {
+    // Solving issues for letterbox screens:
+    max-width: 80vmax;
+  }
+
+  // fullpage.js elements
+  &.fp-slide {
+    float: none;
+  }
+
+  .fp-tableCell {
+    // @include add-grid(12);
+
+    display: block;
   }
 }
 
@@ -96,3 +110,4 @@
     }
   }
 }
+

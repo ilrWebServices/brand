@@ -19,6 +19,7 @@ main_menu:
     components/_patterns/02-molecules/menus/main-menu/main-menu.js: {}
   dependencies:
     - core/drupal
+    - prism/gsap
 
 title_screen:
   js:
@@ -31,7 +32,15 @@ logo:
 gsap:
   js:
     //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js: { every_page: true }
+    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js: { every_page: true }
     //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js: { every_page: true }
     //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js: { every_page: true }
     //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/AttrPlugin.min.js: { every_page: true }
 
+fullpage:
+  js:
+    components/js/fullPage.js/dist/jquery.fullpage.min.js: { every_page: true }
+    components/_patterns/03-organisms/slide/slide.js: { every_page: true }
+  css:
+    theme:
+      components/js/fullPage.js/dist/jquery.fullpage.min.css: { every_page: true }
