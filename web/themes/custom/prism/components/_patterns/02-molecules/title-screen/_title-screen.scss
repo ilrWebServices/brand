@@ -1,10 +1,10 @@
 $title-padding: 40px;
 
 .title-screen__wrapper {
-  display: none;
-  position: fixed;
+  // display: none;
+  // position: fixed;
   width: 100vw;
-  height: 100vh;
+  // height: 90vh;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -12,18 +12,24 @@ $title-padding: 40px;
   background: $black;
   padding: $title-padding;
   color: white;
+
+  &.slide {
+    max-width: 100vw;
+  }
 }
 
 .title-screen__frame {
   @include frame($width: 2vmin);
 
-  height: 90vh;
+  height: 75vh;
   visibility: hidden;
 }
 
 .title-screen__heading {
   @include alt-heading;
 
+  float: right;
+  max-width: 40%;
   margin-top: 0;
 }
 

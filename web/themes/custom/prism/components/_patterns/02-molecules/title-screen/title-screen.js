@@ -11,8 +11,8 @@
       function animateTitle() {
         TweenLite.from(frame, length/4, {autoAlpha: 0, top:"100px", opacity: 0}).delay(length/4);
         TweenLite.from(sectionHeading, length/5, {text:'', ease:Linear.easeNone}).delay(length/2);
-        TweenLite.to(screen, length/4, {top:"-100vh", autoAlpha: 0}).delay(length);
-        TweenLite.from(content, length/4, {top:"200px"}).delay(length);
+        // TweenLite.to(screen, length/4, {top:"-100vh", autoAlpha: 0}).delay(length);
+        // TweenLite.from(content, length/4, {top:"200px"}).delay(length);
       }
 
       function reset() {

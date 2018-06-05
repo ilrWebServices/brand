@@ -5,13 +5,17 @@
   @include leader(1);
 
   min-height: 90vh;
-  // border-bottom: 5px solid $color-border;
+  border-bottom: 2px solid $color-border;
   padding: 1rem;
 
   @include large {
     .slide__intro {
       @include grid-span(3);
     }
+
+    // &:nth-child(even) {
+    //   background: #fafafa;
+    // }
   }
 
   @include xl {

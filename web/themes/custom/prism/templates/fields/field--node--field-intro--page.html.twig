@@ -1,4 +1,4 @@
 {% include "@molecules/title-screen/title-screen.twig" with {
-  title: 'Our Verbal Style',
-  section: 'Personality &amp; Tone'
+  title: drupal_token('node:menu-link:parent:title', {node: element['#object']}),
+  section: drupal_title()
 }%}

@@ -3,16 +3,8 @@
     attach: function (context) {
       // $(document).ready(function() {
       $('#slide__wrapper').fullpage({
-        //Navigation
-        // menu: '#menu',
-        // lockAnchors: false,
-        // anchors:['firstPage', 'secondPage'],
-        // navigation: false,
-        // navigationPosition: 'right',
-        // navigationTooltips: ['firstSlide', 'secondSlide'],
-        // showActiveTooltip: false,
-        // slidesNavigation: false,
-        // slidesNavPosition: 'bottom',
+        navigation: true,
+        navigationPosition: 'left',
 
         //Scrolling
         css3: true,
@@ -50,29 +42,15 @@
         controlArrows: true,
         verticalCentered: true,
         // sectionsColor : ['#ccc', '#fff'],
-        // paddingTop: '3em',
+        // paddingTop: '2em',
         // paddingBottom: '10px',
         fixedElements: '#block-prism-main-menu',
-        responsiveWidth: 0,
+        responsiveWidth: 769,
         responsiveHeight: 0,
         responsiveSlides: false,
-        parallax: false,
-        // parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
         //Custom selectors
-        sectionSelector: '.slide',
-        // slideSelector: '.slide',
-
-        // lazyLoading: true,
-
-        //events
-        // onLeave: function(index, nextIndex, direction){},
-        // afterLoad: function(anchorLink, index){},
-        // afterRender: function(){},
-        // afterResize: function(){},
-        // afterResponsive: function(isResponsive){},
-        // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        sectionSelector: '.slide'
       });
     }
   };
