@@ -28,8 +28,7 @@ body {
   top: 5rem;
 
   @include large {
-    padding: $space-double 0 0;
-    // border-top: 3px solid $color-border;
+    padding: 0;
 
     &--with-sidebar {
       @include grid-span(9,1);

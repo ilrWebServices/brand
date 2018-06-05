@@ -75,6 +75,8 @@ $admin-toolbar-fix: 3rem;
   .logo__wrapper {
     mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
     mask-size: 65%;
+    -webkit-mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
+    -webkit-mask-size: 30%;
 
     &:hover {
       background: white;

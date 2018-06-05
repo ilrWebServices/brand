@@ -17,9 +17,9 @@
       'use strict';
 
       // Use context instead of document IF DRUPAL.
-      var toggle_expand = document.getElementById('toggle-expand'),
-          menu = document.getElementById('main-nav'),
-          expand_menu = false,
+      var toggle_expand = $('#toggle-expand'),
+          menu = $('#main-nav'),
+          expanded = false,
           items = [],
           timing = .4,
           stagger = .02,
@@ -27,19 +27,23 @@
           tl = new TimelineLite({ onReverseComplete: resetMenu });
 
       if (menu) {
-        expand_menu = menu.getElementsByClassName('expand-sub');
-
         $(toggle_expand).hover(
           function() {
-            menu.classList.toggle('main-nav--open');
-            if (items.length) {
-              tl.restart();
+            if (tl.isActive()) { // They rolled back over menu
+              tl.pause();
             }
-            else {
-              items = $('.main-menu__item');
-              $(items).each(function(index){
-                tl.from(this, timing, {top:"-=30px", autoAlpha: 0, ease: Power3.easeOut}, '-='+offset);
-              });
+            if (!expanded) {
+              toggle_expand.addClass('expanded');
+              menu.addClass('main-nav--open');
+              expanded = true;
+              if (items.length) {
+                tl.restart();
+              } else {
+                items = $('.main-menu__item');
+                $(items).each(function(index){
+                  tl.from(this, timing, {top:"-=30px", autoAlpha: 0, ease: Power3.easeOut}, '-='+offset);
+                });
+              }
             }
           },
           function(){},
@@ -48,15 +52,14 @@
         $(menu).hover(
           function(){},
           function() {
-            // if (!tl.reversed()) {
-              tl.reverse();
-            // }
+            tl.reverse();
           }
         );
       }
 
       function resetMenu() {
-        menu.classList.toggle('main-nav--open');
+        expanded = false;
+        menu.removeClass('main-nav--open');
       }
     }
   };

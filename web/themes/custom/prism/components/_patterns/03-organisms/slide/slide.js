@@ -2,7 +2,7 @@
   Drupal.behaviors.slide = {
     attach: function (context) {
       // $(document).ready(function() {
-      $('#fullpage').fullpage({
+      $('#slide__wrapper').fullpage({
         //Navigation
         // menu: '#menu',
         // lockAnchors: false,
