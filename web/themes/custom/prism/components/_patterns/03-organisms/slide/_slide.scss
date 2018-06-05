@@ -49,8 +49,8 @@
       &--#{$i}col {
         .slide-content__col {
           $n: 12 / $i;
-          @include sgs-change('output', 'float');
 
+          @include sgs-change('output', 'float');
           @include grid-span($n);
 
           &:nth-of-type(#{$i}n) {
