@@ -3,7 +3,7 @@ $main-menu-medium: 62em;
 
 #block-prism-main-menu {
   position: fixed;
-  top: 1.9rem;
+  top: 0;
   width: 100vw;
   z-index: 20000;
   background: white;
@@ -32,6 +32,7 @@ $main-menu-medium: 62em;
   position: absolute;
   width: 90%;
   z-index: 10;
+  padding-top: 1.9rem;
 
   @include breakpoint($main-menu-medium) {
     @include padding-trailer(0.4);
@@ -45,6 +46,6 @@ $main-menu-medium: 62em;
 
   &--sub {
     display: inline-block;
-    // left: -25%;
+    padding-top: 0;
   }
 }

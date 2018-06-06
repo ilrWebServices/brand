@@ -8,13 +8,13 @@
 
 {% set page_title = drupal_title() %}
 {% set title_modifiers = [] %}
-{% if page_title == section_title['#markup'] %}
+{% if page_title['#markup'] == section_title %}
   {% set title_modifiers = ['alt'] %}
 {% endif %}
 
 {% include "@molecules/title-screen/title-screen.twig" with {
   title: section_title,
-  section: '',
+  section: page_title,
   modifiers: title_modifiers
 }%}
 

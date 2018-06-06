@@ -33,6 +33,18 @@
 
     display: block;
   }
+
+  &--intro {
+    .slide-intro__heading {
+      @include heading-large;
+    }
+
+    .slide__content {
+      p {
+        @include adjust-font-size-to(34px, 1.2);
+      }
+    }
+  }
 }
 
 .slide-content__col {
