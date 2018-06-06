@@ -1,4 +1,5 @@
-<div class="slide slide--visual section">
+{% set modifiers = modifiers|default('visual') %}
+<div class="slide{% for modifier in modifiers %} slide--{{ modifier }}{% endfor %}">
   <div class="slide__intro">
     <h2 class="slide-intro__heading">{{ intro_heading }}</h2>
     <div class="slide-intro__text">
@@ -34,7 +35,7 @@
     <div class="slide__content slide__content--sym slide__content--{{ columns }}col">
       {% for slide in slides %}
         <div class="slide-content__col">
-          {{ slide }}
+          {{ slide|raw }}
         </div>
       {% endfor %}
     </div><!-- /.slide-content-->

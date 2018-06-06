@@ -35,6 +35,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
+        "drupal/simplify_menu": "^2.0",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_tweak": "^2.0",
         "drush/drush": "^9.0.0",

@@ -11,3 +11,15 @@
 .media__image {
   @include trailer(1);
 }
+
+img {
+  &[data-align="right"] {
+    float: right;
+    margin-left: 2rem;
+  }
+
+  &[data-align="left"] {
+    float: left;
+    margin-right: 2rem;
+  }
+}
