@@ -2,3 +2,10 @@ name: brand.ilr
 recipe: drupal8
 config:
   webroot: ./web/
+
+tooling:
+  drush:
+    service: appserver
+    cmd:
+      - "drush"
+      - "--root=/app/web"
