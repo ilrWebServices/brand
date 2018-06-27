@@ -1,27 +1,7 @@
-{% set section_title = '' %}
-{% set items = simplify_menu('main') %}
-{% for item in items.menu_tree %}
-  {% if item.active_trail %}
-    {% set section_title = item.text %}
-  {% endif %}
-{% endfor %}
-
-{% set page_title = drupal_title() %}
-{% set title_modifiers = [] %}
-{% if page_title['#markup'] == section_title %}
-  {% set title_modifiers = ['alt'] %}
-{% endif %}
-
-{% include "@molecules/title-screen/title-screen.twig" with {
-  title: section_title,
-  section: page_title,
-  modifiers: title_modifiers
-}%}
-
 {% set intro_text = element|field_value[0]['#text'] %}
 
 {% include '@organisms/slide/visual-slide.twig' with {
-  intro_heading: page_title,
+  intro_heading: drupal_title(),
   intro_text: '',
   columns: 1,
   asymmetrical: false,

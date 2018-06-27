@@ -4,23 +4,22 @@
   @include add-gutter(1/2);
   @include leader(1);
 
-  min-height: 90vh;
+  min-height: 80vh;
   border-bottom: 2px solid $color-border;
-  padding: 1rem;
+  padding: 3rem 1rem;
 
   @include large {
+    padding: 5rem 1rem;
+
     .slide__intro {
       @include grid-span(3);
     }
-
-    // &:nth-child(even) {
-    //   background: #fafafa;
-    // }
   }
 
   @include xl {
     // Solving issues for letterbox screens:
     max-width: 80vmax;
+    padding: 7rem 1rem;
   }
 
   // fullpage.js elements
@@ -34,14 +33,15 @@
     display: block;
   }
 
-  &--intro {
+  &--intro,
+  &--text {
     .slide-intro__heading {
       @include heading-large;
     }
 
     .slide__content {
       p {
-        @include adjust-font-size-to(34px, 1.2);
+        @include adjust-font-size-to(34px, 1.3);
       }
     }
   }
@@ -53,7 +53,7 @@
 }
 
 .slide-intro__heading {
-  @include heading-xs($font-weight: 600);
+  @include heading-small($font-weight: 600);
 }
 
 // outer grid for intro and content

@@ -1,5 +1,5 @@
 img_src:
-  '../../images/svg/ILR-nickname.svg'
+  '../../images/svg/ilr-nickname2.svg'
 img_alt:
   'The ILR School'
 img_url:
@@ -8,3 +8,5 @@ image_link_base_class:
   'nickname'
 modifiers:
   ['nickname']
+image_modifiers:
+  ['logo']

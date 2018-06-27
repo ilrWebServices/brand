@@ -1,0 +1,13 @@
+{% set modifiers = modifiers|default(['text']) %}
+
+<div class="fp-auto-height slide{% for modifier in modifiers %} slide--{{ modifier }}{% endfor %}">
+  <div class="slide__intro">
+    <h2 class="slide-intro__heading">{{ intro_heading }}</h2>
+  </div><!-- /.slide-intro-->
+
+  <div class="slide__content slide__content--sym slide__content--{{ columns }}col">
+    <div class="slide-content__col">
+      {{ text_content|raw }}
+    </div>
+  </div><!-- /.slide-content-->
+</div><!-- /.slide--text -->

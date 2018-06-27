@@ -5,19 +5,21 @@
   padding: 0.2rem 0;
   margin-bottom: 0;
   text-align: center;
+  color: $color-nav;
 
   &:hover {
-    color: $color-link--hover;
+    color: $color-subnav;
     text-decoration: none;
   }
 
   &--sub {
     border-top: 1px solid $color-subnav;
     color: $color-subnav;
+    font-weight: 300;
 
     &:hover {
-      color: $color-link;
-      text-decoration: none;
+      color: $color-subnav;
+      text-decoration: underline;
     }
   }
 

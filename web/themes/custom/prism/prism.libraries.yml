@@ -13,7 +13,6 @@ global:
     components/js/fullPage.js/dist/jquery.fullpage.min.js: {}
     components/_patterns/03-organisms/slide/slide.js: {}
     components/_patterns/02-molecules/menus/main-menu/main-menu.js: {}
-    components/_patterns/02-molecules/title-screen/title-screen.js: {}
 
   dependencies:
     - core/drupal

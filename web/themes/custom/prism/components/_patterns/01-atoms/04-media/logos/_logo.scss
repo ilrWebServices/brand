@@ -1,11 +1,15 @@
 $admin-toolbar-fix: 3rem;
 
 .logo__link {
-  position: fixed;
-  top: 1rem;
+  // position: fixed;
+  // top: 1rem;
   display: inline-block;
   z-index: 100000;
-  background: white;
+  background: $white;
+  line-height: 1;
+
+  height: 80px;
+  width: 80px;
 
   .adminimal-admin-toolbar & {
     top: $admin-toolbar-fix;
@@ -19,23 +23,30 @@ $admin-toolbar-fix: 3rem;
     }
   }
 
-  &:hover {
+  &:hover,
+  &.expanded {
     background: $black;
+
+
+    #logo {
+      fill: $white;
+    }
   }
 
+  background: url('../components/images/svg/ilr-nickname2.svg') center center no-repeat;
+
   img {
-    padding: 1.3rem 1rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    // max-width: 100px;
     visibility: hidden;
   }
 }
 
 .logo__wrapper {
-  background: $black;
   display: block;
-
-  &:hover {
-    background: white;
-  }
+  width: 100%;
 }
 
 .logo__link--reversed.logo__link--red {
@@ -48,9 +59,13 @@ $admin-toolbar-fix: 3rem;
   padding: 1rem 0;
   background: $white;
 
+  img .nickname {
+    visibility: hidden;
+  }
+
   .logo__wrapper {
-    mask: url(../components/images/svg/ILR-wordmark.svg) no-repeat center;
-    mask-size: 80%;
+    // mask: url(../components/images/svg/ILR-wordmark.svg) no-repeat center;
+    // mask-size: 80%;
 
     &:hover {
       background: white;
@@ -61,22 +76,23 @@ $admin-toolbar-fix: 3rem;
     background: $black;
   }
 
-  &--masked {
-    transition: clip-path 0.5s;
-    clip-path: inset(0 0 0 0);
-  }
+  // &--masked {
+  //   transition: clip-path 0.5s;
+  //   clip-path: inset(0 0 0 0);
+  // }
 }
 
 .logo__link--nickname {
-  max-width: 200px;
-  min-width: 80px;
+  // max-width: 200px;
+  // min-width: 100px;
+  // height: auto;
   padding: 0;
 
   .logo__wrapper {
     // -webkit-mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
-    mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
-    -webkit-mask-size: 30%;
-    mask-size: 65%;
+    // mask: url(../components/images/svg/ILR-nickname.svg) no-repeat center;
+    // -webkit-mask-size: 30%;
+    // mask-size: 65%;
 
     &:hover {
       background: white;

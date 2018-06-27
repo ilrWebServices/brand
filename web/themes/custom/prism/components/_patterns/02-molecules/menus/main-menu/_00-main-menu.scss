@@ -6,7 +6,7 @@ $main-menu-medium: 62em;
   top: 0;
   width: 100vw;
   z-index: 20000;
-  background: white;
+  background: $color-nav-bg;
 
   .adminimal-admin-toolbar & {
     top: $admin-toolbar-fix;
@@ -38,7 +38,7 @@ $main-menu-medium: 62em;
     @include padding-trailer(0.4);
 
     position: relative;
-    background: $white;
+    background: $color-nav-bg;
     width: 100%;
     display: flex;
     justify-content: space-around;

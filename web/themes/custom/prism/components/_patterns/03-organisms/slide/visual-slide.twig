@@ -1,5 +1,5 @@
-{% set modifiers = modifiers|default('visual') %}
-<div class="slide{% for modifier in modifiers %} slide--{{ modifier }}{% endfor %}">
+{% set modifiers = modifiers|default(['visual']) %}
+<div class="fp-auto-height slide{% for modifier in modifiers %} slide--{{ modifier }}{% endfor %}">
   <div class="slide__intro">
     <h2 class="slide-intro__heading">{{ intro_heading }}</h2>
     <div class="slide-intro__text">

@@ -4,14 +4,14 @@
       // $(document).ready(function() {
       $('#slide__wrapper').fullpage({
         navigation: true,
-        navigationPosition: 'left',
+        navigationPosition: 'right',
 
         //Scrolling
         css3: true,
         scrollingSpeed: 700,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
+        autoScrolling: false,
+        fitToSection: false,
+        // fitToSectionDelay: 1000,
         scrollBar: false,
         easing: 'easeInOutCubic',
         easingcss3: 'ease',

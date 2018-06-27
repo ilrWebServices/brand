@@ -1,0 +1,9 @@
+{% set paragraph = content.field_text_content|field_value|first['#paragraph'] %}
+{% set heading = paragraph.field_heading.value %}
+{% set text_content = paragraph.field_body.value %}
+
+{% include '@organisms/slide/text-slide.twig' with {
+  intro_heading: heading,
+  columns: 1,
+  text_content: text_content
+} %}

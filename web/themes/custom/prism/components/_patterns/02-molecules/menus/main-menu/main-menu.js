@@ -16,7 +16,6 @@
     attach: function (context) {
       'use strict';
 
-      // Use context instead of document IF DRUPAL.
       var toggle_expand = $('#toggle-expand'),
           menu = $('#main-nav'),
           expanded = false,
@@ -24,16 +23,17 @@
           timing = .4,
           stagger = .02,
           offset = timing - stagger,
-          tl = new TimelineLite({ onReverseComplete: resetMenu });
+          tl = new TimelineLite({ onComplete: resetTrigger, onReverseComplete: resetMenu });
 
       if (menu) {
         $(toggle_expand).hover(
           function() {
-            if (tl.isActive()) { // They rolled back over menu
-              tl.pause();
+            if (tl.isActive() && !$(this).hasClass('animating')) { // They rolled back over menu
+              tl.pause();//$(this).addClass('hovered');
             }
             if (!expanded) {
               toggle_expand.addClass('expanded');
+              toggle_expand.addClass('animating');
               menu.addClass('main-nav--open');
               expanded = true;
               if (items.length) {
@@ -59,7 +59,12 @@
 
       function resetMenu() {
         expanded = false;
+        toggle_expand.removeClass('expanded');
         menu.removeClass('main-nav--open');
+      }
+
+      function resetTrigger() {
+        toggle_expand.removeClass('animating');
       }
     }
   };
