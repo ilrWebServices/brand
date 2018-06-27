@@ -16,6 +16,10 @@
     }
   }
 
+  &:first-of-type {
+    padding-top: 2rem;
+  }
+
   @include xl {
     // Solving issues for letterbox screens:
     max-width: 80vmax;
