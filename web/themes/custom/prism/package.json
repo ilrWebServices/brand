@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "compass-mixins": "0.12.10",
+    "singularitygs": "^1.8.0",
     "npm": "^6.1.0",
     "sass-tools": "^2.1.2"
   },
