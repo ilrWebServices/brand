@@ -2,9 +2,8 @@
 $main-menu-medium: 62em;
 
 #block-prism-main-menu {
-  position: fixed;
   top: 0;
-  width: 100vw;
+
   z-index: 20000;
   background: $color-nav-bg;
   padding: 0;
@@ -19,7 +18,12 @@ $main-menu-medium: 62em;
   display: none;
 
   &--open {
+    position: fixed;
+    width: 100vw;
+    top: 0;
     display: block;
+    overflow-y: scroll;
+    height: 100%;
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 2s;
   }
@@ -29,6 +33,7 @@ $main-menu-medium: 62em;
 .main-menu {
   @include list-reset;
 
+  padding-top: 5rem;
   background: $color-mobile-nav-bg;
   width: 100%;
   z-index: 10;

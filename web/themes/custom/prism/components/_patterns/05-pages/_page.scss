@@ -16,6 +16,8 @@ body {
 
 .main {
   @include wrapper;
+
+  border-top: 1rem solid $cornellian;
 }
 
 .main-sidebar {
