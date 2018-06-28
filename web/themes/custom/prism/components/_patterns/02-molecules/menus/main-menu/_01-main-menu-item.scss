@@ -1,13 +1,10 @@
 // LI
 .main-menu__item {
-  border-top: 1px solid;
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
 
   @include breakpoint($main-menu-medium) {
-    border-top: none;
     display: block;
+    text-align: right;
   }
 
   &:hover {

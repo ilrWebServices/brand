@@ -1,9 +1,47 @@
 .footer {
-  @include full-width;
-  @include padding-leader(1);
-  @include padding-trailer(1);
+  @include frame($width: 20px, $color: $black, $height: 100%);
 
+  padding: 5rem 0 0;
   clear: both;
-  background: $color-footer-bg;
+  background: $white;
   color: $color-footer-text;
+
+  .menu {
+    display: block;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 0;
+    text-align: right;
+
+    @include breakpoint($main-menu-medium) {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0;
+      text-align: right;
+    }
+
+    &__item {
+      padding-bottom: 1rem;
+    }
+
+    &--sub {
+      display: block;
+      padding: 0 0 1rem;
+
+      .menu__item {
+        margin-left: 1rem;
+        padding: 0;
+      }
+
+      .menu__link {
+        color: $gray;
+        display: block;
+      }
+    }
+  }
+
+  #block-footermenu {
+    @include trailer(1);
+  }
 }

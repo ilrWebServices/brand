@@ -3,27 +3,32 @@
   @include add-grid(12);
   @include add-gutter(1/2);
   @include leader(1);
+  @include clearfix;
 
-  min-height: 80vh;
   border-bottom: 2px solid $color-border;
-  padding: 3rem 1rem;
+  padding: 3rem 0;
 
   @include large {
-    padding: 5rem 1rem;
+    padding: 5rem 0;
 
     .slide__intro {
       @include grid-span(3);
     }
   }
 
+  @include xl {
+    // Solving issues for letterbox screens:
+    max-width: 80vmax;
+    padding: 5rem 0;
+  }
+
   &:first-of-type {
     padding-top: 2rem;
   }
 
-  @include xl {
-    // Solving issues for letterbox screens:
-    max-width: 80vmax;
-    padding: 7rem 1rem;
+  &:last-of-type {
+    @include trailer(5);
+    border: none;
   }
 
   // fullpage.js elements
@@ -49,11 +54,6 @@
       }
     }
   }
-}
-
-.slide-content__col {
-  // @include clearfix;
-  @include trailer(2);
 }
 
 .slide-intro__heading {

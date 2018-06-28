@@ -7,6 +7,7 @@ $main-menu-medium: 62em;
   width: 100vw;
   z-index: 20000;
   background: $color-nav-bg;
+  padding: 0;
 
   .adminimal-admin-toolbar & {
     top: $admin-toolbar-fix;
@@ -29,10 +30,8 @@ $main-menu-medium: 62em;
   @include list-reset;
 
   background: $color-mobile-nav-bg;
-  position: absolute;
-  width: 90%;
+  width: 100%;
   z-index: 10;
-  padding-top: 1.9rem;
 
   @include breakpoint($main-menu-medium) {
     @include padding-trailer(0.4);
@@ -42,10 +41,11 @@ $main-menu-medium: 62em;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding-top: 1.9rem;
   }
 
   &--sub {
-    display: inline-block;
+    display: block;
     padding-top: 0;
   }
 }
