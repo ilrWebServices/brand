@@ -14,7 +14,7 @@
           menu = $('#main-nav'),
           expanded = false,
           items = [],
-          timing = .4,
+          timing = .3,
           stagger = .02,
           offset = timing - stagger,
           tl = new TimelineLite({ onComplete: resetTrigger, onReverseComplete: resetMenu });
