@@ -2,7 +2,7 @@
 // General Layout (example code)
 //
 html {
-  background: $black;
+  background: $warm-grey;
   position: relative;
 }
 
@@ -17,7 +17,7 @@ body {
 .main {
   @include wrapper;
 
-  border-top: 1rem solid $cornellian;
+  border-top: 1.1rem solid $cornellian;
 }
 
 .main-sidebar {
