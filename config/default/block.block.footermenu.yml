@@ -1,0 +1,24 @@
+uuid: 827c95bc-2775-48d7-946b-ace13c7736cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu
+  module:
+    - system
+  theme:
+    - prism
+id: footermenu
+theme: prism
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu'
+settings:
+  id: 'system_menu_block:footer-menu'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }
