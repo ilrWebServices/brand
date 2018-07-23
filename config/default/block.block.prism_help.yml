@@ -11,7 +11,7 @@ _core:
 id: prism_help
 theme: prism
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: help_block
 settings:

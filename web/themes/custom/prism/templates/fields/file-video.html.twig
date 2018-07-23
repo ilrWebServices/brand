@@ -1,0 +1,24 @@
+{% set video_content %}
+  <video {{ attributes }}>
+    {% for file in files %}
+      <source {{ file.source_attributes }} />
+    {% endfor %}
+  </video>
+{% endset %}
+
+{% include "@atoms/08-video/video.twig" with {
+  video_content: video_content
+} %}
+{# {% embed "@atoms/08-video/video.twig" %}
+    {% block video_content %}
+        <video {{ attributes }}>
+          {% for file in files %}
+            <source {{ file.source_attributes }} />
+          {% endfor %}
+        </video>
+    {% endblock %}
+{% endembed %} #}
+
+{# <video autoplay="autoplay" loop="loop" width="850" height="480">
+      <source src="/sites/default/files/2018-07/ILR_BrandVideo.mp4" type="video/mp4">
+  </video> #}

@@ -1,0 +1,17 @@
+uuid: 62baf2a0-01c9-4912-b475-5efce7b9213a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: home
+label: Home
+logic: and
+conditions:
+  772353f9-69f3-4cc1-962a-35df0f59bc16:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+    uuid: 772353f9-69f3-4cc1-962a-35df0f59bc16
+allow_other_conditions: false

@@ -1,0 +1,47 @@
+uuid: dad8d605-60f5-49a4-896a-9a2387fe9451
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_block
+    - field.storage.block_content.field_component_reference
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: block_content.component_block.field_component_reference
+field_name: field_component_reference
+entity_type: block_content
+bundle: component_block
+label: component(s)
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+      text: text
+      video: video
+    target_bundles_drag_drop:
+      image:
+        enabled: true
+        weight: 6
+      text:
+        enabled: true
+        weight: 7
+      text_slide:
+        weight: 8
+        enabled: false
+      video:
+        enabled: true
+        weight: 9
+      visual_slide:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

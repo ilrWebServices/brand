@@ -1,0 +1,8 @@
+uuid: b11b643e-95eb-42c1-bbd6-119cec14e804
+langcode: en
+status: true
+dependencies: {  }
+id: component_block
+label: 'Component block'
+revision: 0
+description: ''

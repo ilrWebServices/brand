@@ -92,14 +92,16 @@ function prism_get_media_entity_from_reference($media_reference=NULL) {
  */
 function prism_get_image_properties_from_media_entity($media_entity) {
   if ($media_entity) {
-    if ($img_entity = $media_entity->get('field_media_image')->first()) {
-      if ($file_entity = $img_entity->get('entity')->getTarget()) {
-        return [
-          'uri' => $file_entity->get('uri')->getString(),
-          'alt' => $img_entity->get('alt')->getString(),
-          'title' => $img_entity->get('title')->getString(),
-          'caption' => $media_entity->get('field_caption')->value,
-        ];
+    if ($media_entity->hasField('field_media_image')) {
+      if ($img_entity = $media_entity->get('field_media_image')->first()) {
+        if ($file_entity = $img_entity->get('entity')->getTarget()) {
+          return [
+            'uri' => $file_entity->get('uri')->getString(),
+            'alt' => $img_entity->get('alt')->getString(),
+            'title' => $img_entity->get('title')->getString(),
+            'caption' => $media_entity->get('field_caption')->value,
+          ];
+        }
       }
     }
   }

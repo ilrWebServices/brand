@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_components
     - node.type.page
     - paragraphs.paragraphs_type.text_slide
+    - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.visual_slide
   module:
     - entity_reference_revisions
@@ -26,6 +27,7 @@ settings:
     target_bundles:
       text_slide: text_slide
       visual_slide: visual_slide
+      video: video
     target_bundles_drag_drop:
       text:
         weight: 4
@@ -33,7 +35,13 @@ settings:
       text_slide:
         enabled: true
         weight: 5
+      image:
+        weight: 6
+        enabled: false
       visual_slide:
         enabled: true
         weight: 6
+      video:
+        enabled: true
+        weight: 9
 field_type: entity_reference_revisions

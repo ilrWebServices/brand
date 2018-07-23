@@ -1,0 +1,35 @@
+uuid: e6fa5281-20c2-4ef9-a05f-56712e052eea
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_block
+    - field.field.block_content.component_block.field_component_reference
+  module:
+    - paragraphs
+id: block_content.component_block.default
+targetEntityType: block_content
+bundle: component_block
+mode: default
+content:
+  field_component_reference:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
