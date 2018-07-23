@@ -1,11 +1,11 @@
-uuid: ec366cd0-3060-44fd-81af-dfd32c92b969
+uuid: 04affd8a-bcf0-441c-a520-f91e32cced64
 langcode: en
 status: true
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home
   content:
-    - 'block_content:component_block:8d18bce2-9330-49ce-aceb-f110b30ca40e'
+    - 'block_content:component_block:31287c2f-0e77-4bd9-84cf-f612b729e67a'
   module:
     - block_content
     - block_visibility_groups
@@ -16,9 +16,9 @@ theme: prism
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:8d18bce2-9330-49ce-aceb-f110b30ca40e'
+plugin: 'block_content:31287c2f-0e77-4bd9-84cf-f612b729e67a'
 settings:
-  id: 'block_content:8d18bce2-9330-49ce-aceb-f110b30ca40e'
+  id: 'block_content:31287c2f-0e77-4bd9-84cf-f612b729e67a'
   label: 'Homepage video'
   provider: block_content
   label_display: '0'
