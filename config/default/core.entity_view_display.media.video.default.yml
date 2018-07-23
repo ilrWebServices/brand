@@ -19,13 +19,13 @@ content:
     weight: 0
     label: hidden
     settings:
+      controls: true
       autoplay: true
-      loop: true
       multiple_file_display_type: tags
       muted: true
       width: 850
       height: 480
-      controls: false
+      loop: false
     third_party_settings: {  }
     region: content
 hidden:
