@@ -143,3 +143,16 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd web ; /app/vendor/drush/drush/drush core-cron'
+    snapshot:
+        spec: '0 5 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                platform snapshot:create --yes --no-wait
+            fi
+    renewcert:
+        # Force a redeploy at 10 am (UTC) on the 3rd of every month.
+        spec: '0 10 3 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                platform redeploy --yes --no-wait
+            fi
