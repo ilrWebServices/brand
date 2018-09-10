@@ -33,6 +33,7 @@
         "drupal/entity_browser": "2.x-dev",
         "drupal/field_group": "^1.0",
         "drupal/focal_point": "^1.0@beta",
+        "drupal/google_analytics": "^2.3",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
