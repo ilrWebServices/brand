@@ -35,6 +35,8 @@
         "drupal/focal_point": "^1.0@beta",
         "drupal/google_analytics": "^2.3",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/linkit": "^4.3",
+        "drupal/media_entity_download": "^2.0@beta",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
         "drupal/simplify_menu": "^2.0",

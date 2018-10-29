@@ -39,7 +39,9 @@ module:
   image: 0
   inline_entity_form: 0
   link: 0
+  linkit: 0
   media: 0
+  media_entity_download: 0
   media_essentials: 0
   menu_ui: 0
   node: 0
