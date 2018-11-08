@@ -31,6 +31,11 @@ mounts:
     '/private': 'shared:files/private'
     '/drush-backups': 'shared:files/drush-backups'
 
+# Update the php.ini settings for file uploads on thh server
+variables:
+    php:
+        'post_max_size': '200M'
+        'upload_max_filesize': '200M'
 
 # Configuration of the build of this application.
 build:
