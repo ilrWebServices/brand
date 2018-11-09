@@ -3,14 +3,14 @@
   "description": "Project template for Drupal 8 themes",
   "version": "1.0.0",
   "devDependencies": {
-    "emulsify-gulp": "fourkitchens/emulsify-gulp",
+    "emulsify-gulp": "2.6",
     "gulp": "^3.9.1"
   },
   "dependencies": {
     "compass-mixins": "0.12.10",
-    "singularitygs": "^1.8.0",
     "npm": "^6.1.0",
-    "sass-tools": "^2.1.2"
+    "sass-tools": "^2.1.2",
+    "singularitygs": "^1.8.0"
   },
   "scripts": {
     "start": "gulp compile && gulp theme",
