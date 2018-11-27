@@ -15,7 +15,6 @@
 #}
 {% set image_link_base_class = image_link_base_class|default('image') %}
 {% set image_base_class = image_base_class|default('img') %}
-
 {% if img_url %}
   {% embed "@atoms/01-links/link/link.twig" with {
     "link_url": img_url,
@@ -35,11 +34,16 @@
     {% endblock %}
   {% endembed %}
 {% else %}
-  <img
-    {{ bem(image_base_class, (image_modifiers), image_blockname) }}
-    src="{{ img_src }}"
-    {% if img_alt %}
-      alt="{{ img_alt }}"
-    {% endif %}
-  />
+  <figure>
+    <img
+      {{ bem(image_base_class, (image_modifiers), image_blockname) }}
+      src="{{ img_src }}"
+      {% if img_alt %}
+        alt="{{ img_alt }}"
+      {% endif %}
+    />
+    <figcaption>
+      {{ img_caption|raw }}
+    </figcaption>
+  </figure>
 {% endif %}

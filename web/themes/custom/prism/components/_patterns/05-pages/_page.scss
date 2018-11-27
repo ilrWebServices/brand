@@ -12,6 +12,12 @@ body {
   margin: 0;
   padding: 0;
   margin-top: -30px !important; // Fix for page bg color overflow
+
+  &.cke_editable {
+    margin: 0 !important;
+    background: white;
+    padding: 2rem 1rem;
+  }
 }
 
 .main {
