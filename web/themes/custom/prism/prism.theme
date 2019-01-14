@@ -31,6 +31,7 @@ function prism_preprocess_html(&$variables) {
   if (!empty($variables['node_type'])) {
     $type = str_replace('_', '-', $variables['node_type']);
     $variables['path_info']['node_type_class'] = "node-type__{$type}";
+    $variables['path_info']['path_class'] = "page--{$variables['path_info']['args']}";
   }
   // Prepare the html template for production-specific
   // output like google tag manager

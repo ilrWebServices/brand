@@ -42,7 +42,7 @@
   }
 
   &--intro,
-  &--text {
+  &--text:first-of-type {
     .slide-intro__heading {
       @include heading-large;
     }
@@ -63,6 +63,8 @@
 .slide__content {
   @include large { // all grids
     @include grid-span(8, 5);
+
+    margin-right: 2rem;
 
     @for $i from 2 through 4 { // Applies to symmetrical grids
       &--#{$i}col {
