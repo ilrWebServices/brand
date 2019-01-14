@@ -19,6 +19,7 @@ settings:
           items:
             - Bold
             - Italic
+            - Styles
         -
           name: Linking
           items:
@@ -45,7 +46,7 @@ settings:
             - Source
   plugins:
     stylescombo:
-      styles: ''
+      styles: a.icon--download|Download
     language:
       language_list: un
     linkit:
