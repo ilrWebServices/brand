@@ -1,16 +1,16 @@
 #!/bin/bash
 
+# remove the local db
+drush sql-drop -y
+
 # download the prod db
-drush @ilrbrand.master sql:dump --structure-tables-list=cache,cache_* > db/dump.sql
+drush sql-sync @ilrbrand.master @ilrbrand._local --structure-tables-list=cache,cache_* -y
 
-# import to lando
-lando db-import db/dump.sql
+drush cr
 
-lando drush cr
+drush sql:sanitize -y
 
-lando drush sql:sanitize -y
-
-lando drush uli
+drush uli
 
 # check whether to keep the prod config in place
 while :; do
@@ -24,8 +24,8 @@ done
 
 if [ "$CONFIG" != "YES" ]; then
   # import local config
-  lando drush cim -y
-  lando drush csim -y
+  drush cim -y
+  drush csim -y
 fi
 
 echo "Sync complete."
