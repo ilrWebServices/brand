@@ -43,7 +43,7 @@
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_tweak": "^2.0",
         "drupal/video": "^1.2",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^9.4",
         "enyo/dropzone": "^5.1",
         "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.4",
