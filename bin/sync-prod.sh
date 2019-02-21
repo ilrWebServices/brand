@@ -1,16 +1,12 @@
 #!/bin/bash
 
-# remove the local db
-drush sql-drop -y
+cd `git rev-parse --show-toplevel`
 
 # download the prod db
-drush sql-sync @ilrbrand.master @ilrbrand._local --structure-tables-list=cache,cache_* -y
-
-drush cr
-
-drush sql:sanitize -y
-
-drush uli
+./vendor/bin/drush sql:sync @ilrbrand.master @ilrbrand._local --structure-tables-list=cache,cache_* -y
+./vendor/bin/drush cr
+./vendor/bin/drush sql:sanitize -y
+./vendor/bin/drush uli
 
 # check whether to keep the prod config in place
 while :; do
@@ -24,8 +20,8 @@ done
 
 if [ "$CONFIG" != "YES" ]; then
   # import local config
-  drush cim -y
-  drush csim -y
+  ./vendor/bin/drush cim -y
+  ./vendor/bin/drush csim -y
 fi
 
 echo "Sync complete."
