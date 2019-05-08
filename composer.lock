@@ -3964,17 +3964,17 @@
         },
         {
             "name": "drupal/video",
-            "version": "1.2.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/video.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/video-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "d0af8254ad0e3c496fda89d5b796d6fb86ebda7d"
+                "url": "https://ftp.drupal.org/files/projects/video-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "a0aad27d912d7e9d9f7c1561c6d6567e09a1cf1d"
             },
             "require": {
                 "drupal/core": "*"
@@ -3986,7 +3986,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x",
-                    "datestamp": "1455470039",
+                    "datestamp": "1550692519",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4023,7 +4023,7 @@
             "description": "Video module allows you to embedded videos from YouTube, Vimeo, Facebook, Vine etc (Drupal 8 only) and upload videos and play using HTML5 video player.",
             "homepage": "https://www.drupal.org/project/video",
             "support": {
-                "source": "http://cgit.drupalcode.org/video"
+                "source": "https://git.drupalcode.org/project/video"
             }
         },
         {
