@@ -44,7 +44,6 @@ build:
 dependencies:
   nodejs:
     gulp-cli: "*"
-    yarn: "*"
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
