@@ -38,7 +38,7 @@
         "drupal/linkit": "^4.3",
         "drupal/media_entity_download": "^2.0@beta",
         "drupal/paragraphs": "^1.2",
-        "drupal/pathauto": "^1.2",
+        "drupal/pathauto": "^1.6",
         "drupal/simplify_menu": "^2.0",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_tweak": "^2.0",
