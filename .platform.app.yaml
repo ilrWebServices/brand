@@ -61,7 +61,6 @@ hooks:
       /app/vendor/drush/drush/drush -y cache-rebuild
       /app/vendor/drush/drush/drush -y updatedb
       /app/vendor/drush/drush/drush -y config-import
-      /app/vendor/drush/drush/drush -y entup
       /app/vendor/drush/drush/drush -y cache-rebuild
 
 # The configuration of app when it is exposed to the web.
