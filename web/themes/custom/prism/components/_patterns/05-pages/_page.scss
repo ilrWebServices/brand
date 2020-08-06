@@ -23,6 +23,7 @@ body {
 .main {
   @include wrapper;
 
+  min-height: 60vh;
   border-top: 1.1rem solid $cornellian;
 }
 
