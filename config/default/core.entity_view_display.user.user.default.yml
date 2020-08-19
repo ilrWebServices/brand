@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_common_name
   module:
-    - image
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -20,13 +18,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  user_picture:
-    type: image
-    weight: 0
-    region: content
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
-hidden: {  }
+hidden:
+  field_common_name: true

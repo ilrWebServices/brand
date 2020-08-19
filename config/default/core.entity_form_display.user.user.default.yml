@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_common_name
   module:
-    - image
     - path
     - user
 _core:
@@ -47,12 +45,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  user_picture:
-    type: image_image
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    weight: -1
-    region: content
-hidden: {  }
+hidden:
+  field_common_name: true
