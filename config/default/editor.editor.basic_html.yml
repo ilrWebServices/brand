@@ -35,7 +35,6 @@ settings:
           items:
             - Blockquote
             - DrupalImage
-            - Linkit
         -
           name: 'Block Formatting'
           items:
@@ -49,7 +48,8 @@ settings:
       styles: a.icon--download|Download
     language:
       language_list: un
-    linkit:
+    drupallink:
+      linkit_enabled: true
       linkit_profile: media
 image_upload:
   status: true

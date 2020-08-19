@@ -5,14 +5,14 @@ dependencies: {  }
 id: media
 label: Media
 description: ''
-attributes: {  }
 matchers:
   9b46acf0-916c-496e-a3ad-12e408c39adf:
     uuid: 9b46acf0-916c-496e-a3ad-12e408c39adf
     id: 'entity:media'
     weight: 0
     settings:
-      result_description: ''
       bundles:
         file: file
       group_by_bundle: false
+      substitution_type: canonical
+      metadata: ''
