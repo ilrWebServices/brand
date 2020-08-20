@@ -772,6 +772,23 @@ $settings['file_scan_ignore_directories'] = [
 $settings['entity_update_batch_size'] = 50;
 
 /**
+ * SAML Auth secret settings.
+ *
+ * Bogus data for the service provider private key is stored in config. The real
+ * value should be added to the environment.
+ */
+if (!empty(getenv('SAMLAUTH_SP_PRIVATE_KEY'))) {
+  $config['samlauth.authentication']['sp_private_key'] = getenv('SAMLAUTH_SP_PRIVATE_KEY');
+}
+
+/**
+ * SAML Auth service provider entity id.
+ *
+ * This is automatically configured for the current host.
+ */
+$config['samlauth.authentication']['sp_entity_id'] = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/saml/metadata';
+
+/**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
