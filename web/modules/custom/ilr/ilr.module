@@ -31,9 +31,4 @@ function ilr_form_user_login_form_alter(&$form, FormStateInterface $form_state, 
     '#markup' => '<h2>' . t('No Cornell NetID?') . '</h2>',
     '#weight' => -1
   ];
-
-  unset($form['drupal_login_title']);
-  unset($form['name']);
-  unset($form['pass']);
-  unset($form['actions']);
 }
