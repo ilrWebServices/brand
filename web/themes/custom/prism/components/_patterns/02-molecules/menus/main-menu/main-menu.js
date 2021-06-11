@@ -6,6 +6,8 @@
 
 (function ($, Drupal) {
 
+  return;
+
   Drupal.behaviors.mainMenu = {
     attach: function (context) {
       'use strict';

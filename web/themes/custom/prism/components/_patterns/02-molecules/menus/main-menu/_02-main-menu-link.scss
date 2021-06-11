@@ -24,7 +24,11 @@
 
   @include breakpoint($main-menu-medium) {
     display: block;
-    padding: 0.2rem 0;
+    color: $cornellian;
+
+    &:hover {
+      color: $cornellian;
+    }
 
     &--sub {
       border: none;

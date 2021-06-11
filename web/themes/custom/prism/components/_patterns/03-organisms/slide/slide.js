@@ -44,7 +44,7 @@
         // sectionsColor : ['#ccc', '#fff'],
         // paddingTop: '2em',
         // paddingBottom: '10px',
-        fixedElements: '#block-prism-main-menu',
+        // fixedElements: '#block-prism-main-menu',
         responsiveWidth: 769,
         responsiveHeight: 0,
         responsiveSlides: false,
