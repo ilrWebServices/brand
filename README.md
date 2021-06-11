@@ -34,12 +34,8 @@ Here's a suggested example:
 // Allow any domain to access the site.
 $settings['trusted_host_patterns'] = [];
 
-// Switch the salesforce auth provider to production if needed.
-// Otherwise, we will use the default for dev.
-// $config['salesforce.settings']['salesforce_auth_provider'] = 'ilr_marketing_jwt_oauth';
-
 // Enable the config split for development-only modules, like field_ui.
-$config['config_split.config_split.dev']['status'] = TRUE;
+$config['config_split.config_split.local']['status'] = TRUE;
 
 // Enable local development services.
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/local_development.services.yml';
