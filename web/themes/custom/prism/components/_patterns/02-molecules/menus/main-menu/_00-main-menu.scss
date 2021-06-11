@@ -18,9 +18,29 @@ $main-menu-medium: 62em;
   width: 100vw;
   top: 0;
   display: block;
+  position: relative;
+
+  + .mobile-menu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    color: $white;
+    text-decoration: none;
+
+    &::before {
+      content: "☰";
+      margin-right: 0.5rem;
+      text-decoration: none;
+    }
+  }
 
   @include breakpoint($main-menu-medium) {
     height: auto;
+
+    + .mobile-menu {
+      display: none;
+    }
   }
 }
 
@@ -28,6 +48,7 @@ $main-menu-medium: 62em;
 .main-menu {
   @include list-reset;
 
+  display: none;
   transition-duration: 0.125s;
   padding-top: 5rem;
   background: $color-mobile-nav-bg;
