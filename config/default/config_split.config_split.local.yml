@@ -4,10 +4,10 @@ status: false
 dependencies: {  }
 id: local
 label: Local
+description: ''
 folder: ../config/local
 module:
   devel: 0
-  kint: 0
   stage_file_proxy: 0
   update: 0
 theme: {  }
