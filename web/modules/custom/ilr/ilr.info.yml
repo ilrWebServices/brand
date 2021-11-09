@@ -2,4 +2,5 @@ name: 'ILR'
 type: module
 description: 'Update hooks and misc custom code for the ILR Brand site'
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: 'ILR'
