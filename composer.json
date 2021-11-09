@@ -31,7 +31,7 @@
         "drupal/ctools": "^3.0",
         "drupal/dropzonejs_eb_widget": "2.x-dev",
         "drupal/entity_browser": "2.x-dev",
-        "drupal/field_group": "^1.0",
+        "drupal/field_group": "^3.0",
         "drupal/focal_point": "^1.0@beta",
         "drupal/google_analytics": "^2.3",
         "drupal/inline_entity_form": "^1.0@RC",
