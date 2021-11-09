@@ -45,7 +45,6 @@
         "drupal/video": "^1.2",
         "drush/drush": "^10.0.0",
         "enyo/dropzone": "^5.1",
-        "oomphinc/composer-installers-extender": "^2.0.0",
         "platformsh/config-reader": "^2.3",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
