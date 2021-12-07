@@ -32,7 +32,8 @@
         "drupal/components": "^1.0",
         "drupal-pattern-lab/add-attributes-twig-extension": "^1.0",
         "drupal-pattern-lab/bem-twig-extension": "^1.0",
-        "drupal-pattern-lab/unified-twig-extensions": "^0.1"
+        "drupal-pattern-lab/unified-twig-extensions": "^0.1",
+        "drush/drush": "^10.6"
     },
     "require-dev": {},
     "minimum-stability": "dev",
