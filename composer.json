@@ -53,8 +53,7 @@
         "drupal/core-dev": "^8.8",
         "drupal/devel": "^4.1",
         "drupal/entity_clone": "^1.0@beta",
-        "drupal/stage_file_proxy": "^1.0@RC",
-        "drupal/upgrade_status": "^3.11"
+        "drupal/stage_file_proxy": "^1.0@RC"
     },
     "conflict": {
         "drupal/drupal": "*"

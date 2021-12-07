@@ -10,7 +10,6 @@ module:
   devel: 0
   stage_file_proxy: 0
   update: 0
-  upgrade_status: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
