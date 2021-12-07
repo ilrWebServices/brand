@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9351f4c0bfc1eb0e5bd922ddb5559d87",
+    "content-hash": "c24dd47598eb222094d8fe4fd55e79b9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1874,35 +1874,6 @@
                 "source": "https://github.com/doctrine/lexer/tree/1.0.2"
             },
             "time": "2019-06-08T11:03:04+00:00"
-        },
-        {
-            "name": "drupal-pattern-lab/unified-twig-extensions",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal-pattern-lab/unified-twig-extensions.git",
-                "reference": "862b9deccab544ca68e3aaaccc257d14acc9b1f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal-pattern-lab/unified-twig-extensions/zipball/862b9deccab544ca68e3aaaccc257d14acc9b1f6",
-                "reference": "862b9deccab544ca68e3aaaccc257d14acc9b1f6",
-                "shasum": ""
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Salem Ghoweri",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "Share Pattern Lab's custom Twig extensions with Drupal 8.",
-            "support": {
-                "issues": "https://github.com/drupal-pattern-lab/unified-twig-extensions/issues",
-                "source": "https://github.com/drupal-pattern-lab/unified-twig-extensions.git"
-            },
-            "time": "2017-08-08T19:57:42+00:00"
         },
         {
             "name": "drupal/admin_toolbar",
@@ -4243,6 +4214,67 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/twig_tweak",
                 "issues": "https://www.drupal.org/project/issues/twig_tweak"
+            }
+        },
+        {
+            "name": "drupal/unified_twig_ext",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/unified_twig_ext.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/unified_twig_ext-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "8aa03e2d9d8ef00aec2b0f84c79ef76000179b42"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1594897928",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Salem Ghoweri",
+                    "homepage": "https://www.drupal.org/user/137505",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
+                },
+                {
+                    "name": "evanmwillhite",
+                    "homepage": "https://www.drupal.org/user/562168"
+                },
+                {
+                    "name": "rembrandx",
+                    "homepage": "https://www.drupal.org/user/465048"
+                },
+                {
+                    "name": "sghoweri",
+                    "homepage": "https://www.drupal.org/user/2175670"
+                }
+            ],
+            "description": "Share Pattern Lab's custom Twig extensions with Drupal 8.",
+            "homepage": "https://www.drupal.org/project/unified_twig_ext",
+            "support": {
+                "source": "https://github.com/drupal-pattern-lab/unified-twig-extensions.git"
             }
         },
         {
