@@ -65,7 +65,6 @@ module:
   twig_tweak: 0
   unified_twig_ext: 0
   user: 0
-  video: 0
   views_ui: 0
   menu_link_content: 1
   pathauto: 1

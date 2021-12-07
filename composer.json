@@ -42,7 +42,6 @@
         "drupal/simplify_menu": "^2.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^2.4",
-        "drupal/video": "^1.2",
         "drush/drush": "^10.0.0",
         "enyo/dropzone": "^5.1",
         "platformsh/config-reader": "^2.3",
