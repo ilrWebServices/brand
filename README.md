@@ -112,7 +112,10 @@ See https://www.drupal.org/node/2700999 for more information.
 
 This project uses a custom theme (based on the original Emulsify project) that includes PatternLab.
 
-The custom theme is found in `web/themes/custom/prism/`. The Sass CSS preprocessor is used for styles, and you can compile CSS either 1) manually via `npm run build` or 2) automatically by running `npm start` in a spare terminal.
+The custom theme is found in `web/themes/custom/prism/`. The Sass CSS preprocessor is used for styles, and you can compile CSS automatically by running `npm start` in a spare terminal.
+
+As of January 2022, we now commit the compiled css and javascript generated from the `npm start` command above.
+
 
 [Drupal's Core Recommended Metapackage]: https://github.com/drupal/core-recommended
 [Drush launcher]: https://github.com/drush-ops/drush-launcher
