@@ -48,19 +48,8 @@ dependencies:
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
-      curl -sS https://platform.sh/cli/installer | php
       set -e
-      unset NPM_CONFIG_PREFIX
-      curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.1/install.sh | dash
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-      nvm current
-      nvm install 8.14.0
-      cd web/themes/custom/prism
-      nvm use
-      npm install
-      gulp build
-      gulp pl
+      curl -sS https://platform.sh/cli/installer | php
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
       cd web
