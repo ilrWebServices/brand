@@ -5,8 +5,10 @@
  * Contains ilr.module.
  */
 
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
- use Drupal\Core\Url;
+use Drupal\Core\Url;
 
 /**
   * Implements hook_form_BASE_FORM_ID_alter().
@@ -31,4 +33,17 @@ function ilr_form_user_login_form_alter(&$form, FormStateInterface $form_state, 
     '#markup' => '<h2>' . t('No Cornell NetID?') . '</h2>',
     '#weight' => -1
   ];
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function ilr_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ($entity->getEntityType()->id() === 'node' && !empty($build['#attached']['html_head_link'])) {
+    foreach ($build['#attached']['html_head_link'] as $key => $link) {
+      if ($link[0]['rel'] === 'shortlink') {
+        unset($build['#attached']['html_head_link'][$key]);
+      }
+    }
+  }
 }
