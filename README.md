@@ -4,6 +4,18 @@ This is the site at https://brand.ilr.cornell.edu, AKA The Brand Site.
 
 It is based on the [Drupal's Core Recommended Metapackage][].
 
+## Deployment
+
+As of January 2022, this site is statically hosted on Github pages. Content edits are still made on the development Drupal environment, however.
+
+To deploy the static site, run:
+
+```
+./scripts/deploy-static.sh
+```
+
+Local Drupal development instructions remain unchanged.
+
 ## Requirements
 
 - git
