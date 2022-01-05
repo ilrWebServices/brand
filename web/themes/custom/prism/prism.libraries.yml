@@ -4,11 +4,6 @@ global:
       dist/style.css: {}
       components/js/fullPage.js/dist/jquery.fullpage.min.css: {}
   js:
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js: {}
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js: {}
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js: {}
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js: {}
-    //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/AttrPlugin.min.js: {}
     dist/00-base/global/global.js: {}
     components/js/fullPage.js/dist/jquery.fullpage.min.js: {}
     components/_patterns/03-organisms/slide/slide.js: {}
@@ -22,7 +17,3 @@ typekit:
   header: true
   js:
     //use.typekit.net/buv5geg.js: {}
-
-logo:
-  js:
-    components/_patterns/01-atoms/04-media/logos/logo.js: {}
