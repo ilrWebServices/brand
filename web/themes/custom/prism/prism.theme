@@ -100,7 +100,10 @@ function prism_get_image_properties_from_media_entity($media_entity) {
             'uri' => $file_entity->get('uri')->getString(),
             'alt' => $img_entity->get('alt')->getString(),
             'title' => $img_entity->get('title')->getString(),
-            'caption' => $media_entity->get('field_caption')->value,
+            'caption' => $media_entity->get('field_caption')->view([
+              'type' => 'text_default',
+              'label' => 'hidden',
+            ]),
           ];
         }
       }

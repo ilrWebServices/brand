@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - editor
+    - ilr
+    - linkit
+    - media
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -16,7 +19,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt data-entity-type data-entity-uuid data-entity-substitution data-align data-caption width height> <a href hreflang !href accesskey id rel target title class="icon--download" data-entity-type data-entity-uuid data-entity-substitution>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt data-entity-type data-entity-uuid data-entity-substitution data-align data-caption width height> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution class="icon--download">'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -50,3 +53,18 @@ filters:
     weight: -11
     settings:
       title: false
+  filter_download_links:
+    id: filter_download_links
+    provider: ilr
+    status: true
+    weight: 0
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

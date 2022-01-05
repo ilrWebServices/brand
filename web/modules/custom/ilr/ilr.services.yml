@@ -4,3 +4,7 @@ services:
     arguments: ['@entity_type.manager']
     tags:
       - { name: event_subscriber }
+  ilr_brand_path_processor:
+    class: Drupal\ilr\PathProcessor
+    tags:
+      - { name: path_processor_inbound, priority: 200 }
