@@ -1,5 +1,5 @@
 hotlink: false
-origin: 'https://master-7rqtwti-c2n64gvielbrk.us.platform.sh'
+origin: 'https://brand.ilr.cornell.edu'
 origin_dir: sites/default/files
 use_imagecache_root: true
 verify: true
