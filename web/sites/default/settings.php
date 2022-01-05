@@ -798,6 +798,11 @@ if (!empty(getenv('SAMLAUTH_SP_PRIVATE_KEY'))) {
 $config['samlauth.authentication']['sp_entity_id'] = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/saml/metadata';
 
 /**
+ * Disable itok params on image links.
+ */
+$config['image.settings']['suppress_itok_output'] = TRUE;
+
+/**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
