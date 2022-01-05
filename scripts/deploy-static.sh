@@ -18,7 +18,7 @@ touch .nojekyll
 
 # Commit changes.
 git add .
-git commit -m 'Add static site files'
+git diff --staged --quiet || git commit -m 'Update static site files'
 
 # Push to github.
 git push origin gh-pages
