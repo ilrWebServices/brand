@@ -4,18 +4,6 @@ http://{default}/:
     expires: -1s
     paths: {}
   to: https://{default}/
-http://www.{default}/:
-  type: redirect
-  redirects:
-    expires: -1s
-    paths: {}
-  to: https://{default}/
-https://www.{default}/:
-  type: redirect
-  redirects:
-    expires: -1s
-    paths: {}
-  to: https://{default}/
 https://{default}/:
   type: upstream
   redirects:
